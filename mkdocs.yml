@@ -1,1 +1,4 @@
-site_name: My Docs
+site_name: Oxipay POS integration
+pages:
+- Home: index.md
+theme: readthedocs
