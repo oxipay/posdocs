@@ -1,0 +1,10 @@
+install:
+  - cmd: pip install mkdocs
+build: off
+on_success:
+  - cmd: mkdocs build
+  - ps: write-host "test"
+notifications:
+  - provider: Email
+    to:
+      - ryan.bartsch@certegy.com.au
