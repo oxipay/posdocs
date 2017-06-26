@@ -1,9 +1,34 @@
+environment:
+  access_key:
+    secure: HECirTKF3SRo4LaL5UoJyTfEjoKDpcwam5xQ2n5Ggl4=
+  secret_key:
+    secure: qdgYhPIMCQiEH+F0ZVmJY2XAv1nLi5wk32cLd11vS2zICgAkE6PC7b5yLCP8n1WZ
 install:
   - cmd: pip install mkdocs
 build: off
 on_success:
-  - cmd: mkdocs build
-  - ps: write-host "test"
+- cmd: mkdocs build
+- ps: |
+    $bucketName = "posdocs.oxipay.com.au"
+    Set-DefaultAWSRegion -Region ap-southeast-2
+    Set-AWSCredentials -AccessKey $env:access_key -SecretKey $env:secret_key
+    $existingItems = Get-S3Object -BucketName $bucketName
+    foreach($s3object in $existingItems) {
+      Remove-S3Object -BucketName $bucketName -Key $s3object.Key -Force:$true
+    }
+    cd site
+    $itemsToUpload = Get-ChildItem -Path (pwd).path
+    foreach($itemToUpload in $itemsToUpload) {
+      $objectName = $itemToUpload.FullName -replace [Regex]::Escape((Get-Item -Path ".\" -Verbose).FullName+"\"), ""
+      if ($objectName -like "*.*")
+      {
+        Write-S3Object -BucketName $bucketName -File $objectName -Key $objectName
+      }
+      else
+      {
+        Write-S3Object -BucketName $bucketName -Directory $objectName -KeyPrefix $objectName -Recurse
+      }
+    }
 notifications:
   - provider: Email
     to:
