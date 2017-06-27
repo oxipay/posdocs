@@ -1,4 +1,4 @@
-# Oxidocs
+# POS docs
 
 ## Setting up your environment
 
@@ -15,7 +15,8 @@ Note: you might need to ensure cinst, python, & pip are all in your path.
 
 ## Updating the documentation
 
-The oxidocs repository has all the documentation in markdown format. There is also a submodule to the oxipay.github.io GiHub pages repository, which is basically the oxidocs repository transformed into static HTML for the web.
+The posdocs repository has all the documentation in markdown format. Commits to the posdocs repo will automatically publish (via appveyor) the static site content to AWS S3
+http://posdocs.oxipay.com.au.s3-website-ap-southeast-2.amazonaws.com
 
 To update the documentation the following steps need to be done.
 
@@ -33,4 +34,4 @@ To update the documentation the following steps need to be done.
         mkdocs serve
 * Commit your changes and push your branch back up to GitHub.
 * Submit a PR.
-* When the PR is merged into the master branch, the Appveyor build will automatically push the generated content up to the associated GitHub pages repo - [oxipay.github.io](https://github.com/oxipay/oxipay.github.io)
+* When the PR is merged into the master branch, the Appveyor build will automatically push the generated content up to AWS S3

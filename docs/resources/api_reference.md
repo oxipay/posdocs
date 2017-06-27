@@ -6,32 +6,9 @@ These set of endpoints will enable POS to create/reset private keys that will be
 
 ### Create Key
 
-This endpoint will be used to create a device specific key using the shared private key that will then be used to digitally sign all the subsequent messages.
+This endpoint will be used to create a device specific key using the shared private key, that will then be used to digitally sign all the subsequent messages. This will invalidate any existing keys for this device/merchant combination.
 
 **Method:** *CreateKey*
-
-**Request:**
-
-Parameter | Type | Description
------------|------|-------------
-merchantId | Unicode string | Merchant identifier as defined by Oxipay
-deviceId | Unicode string | Unique device identifier for the POS terminal
-signature | Hex string case-insensitive | Payload that is signed using HMAC-SHA256 using a **shared private key**
-
-**Response:**
-
-Parameter | Type | Description
------------|------|-------------
-statusCode | Unicode string | Codes related to Success/Failure/Error
-message | Unicode string | A string explaining the status above
-key | Hex string | Private key for the POS terminal
-signature | Hex string case-insensitive | Payload that is signed using HMAC-SHA256 using a **shared private key**
-
-### Reset Key
-
-This endpoint will be used to reset the key for a particular POS device. This will create a new key for the device and invalidate any existing keys. This new key will have to be used to digitally sign any subsequent messages from this terminal.
-
-**Method:** *ResetKey*
 
 **Request:**
 
@@ -55,7 +32,7 @@ signature | Hex string case-insensitive | Payload that is signed using HMAC-SHA2
 
 This endpoint will process an authorisation to finalise the transaction
 
-**Method:** *ProcessAuth*
+**Method:** *ProcessAuthorisation*
 
 **Request:**
 
@@ -115,7 +92,7 @@ Parameter | Type | Description
 -----------|------|-------------
 posTransactionRef | Unicode string | A transaction reference from POS
 merchantId | Unicode string | Merchant identifier as defined by Oxipay
-amount | decimal | Total purchase amount
+amount | decimal | Requested adjustment amount
 adjustmentCode | Unicode string | Requested amount for adjustment
 deviceId | Unicode string | Unique device identifier for the POS terminal
 signature | Hex string case-insensitive | Payload that is signed using HMAC-SHA256 using a device specific key
