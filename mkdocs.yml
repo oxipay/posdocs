@@ -1,4 +1,8 @@
-site_name: Oxipay POS integration
+site_name: Oxipay POS Integration
 pages:
 - Home: index.md
+- Resources:  
+   - Introduction: resources/introduction.md
+   - API Reference: resources/api_reference.md
 theme: readthedocs
+extra_css: [css/jquery.modal.min.css, css/custom.css]
