@@ -35,3 +35,5 @@ To update the documentation the following steps need to be done.
 * Commit your changes and push your branch back up to GitHub.
 * Submit a PR.
 * When the PR is merged into the master branch, the Appveyor build will automatically push the generated content up to AWS S3
+
+test
