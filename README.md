@@ -37,3 +37,4 @@ To update the documentation the following steps need to be done.
 * When the PR is merged into the master branch, the Appveyor build will automatically push the generated content up to AWS S3
 
 test
+test
