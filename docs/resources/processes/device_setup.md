@@ -2,12 +2,22 @@
 
 <strong>API reference: <a href="/resources/api_reference/#create-key">CreateKey</a></strong>
 
-Every POS device will have its own device specific key that it needs to use to create a digital signature for all the messages when communicating with Oxipay. This device key will be generated on the fly during the device initialisation process.
+This section describes the process of registering a POS device with Oxipay. This registration process will ensure that Oxipay registers the POS device with a unique identifier and issues a device specific key that can be used by that device to digitally sign all traffic.
 
-POS will need to know the following Merchant specific information to carry out the device setup process:
+Every POS device will have to be registered with Oxipay before initiating an Oxipay transaction.
 
-- **Merchant ID** (provided to merchant by Oxipay as part of merchant onboarding)
-- **Merchant API Key** (this is the shared private key - provided to merchant by Oxipay as part of merchant onboarding)
+Steps:
 
+ 1. POS technician wants to register a terminal.
+    * **Option 1:** Merchant can request a list of unique device Ids directly from Oxipay. Oxipay can provide them with this, which then will have to handed over to POS technician
 
-Device initialisation/setup is a process of setting up the initial (once off) handshaking between POS and Oxipay. It involves the POS calling <a href="/resources/api_reference/#Create Key">CreateKey</a> API and use the Merchant API Key to digitally sign the payload. Oxipay will then return a Device Key that will need to be stored in POS and will be used for signing all subsequent messages from that POS device.
+    * **Option 2:** He can log into Oxipay POS Portal and add a device. He will be required to enter the actual device id (internal to POS – assuming these are unique across the system). A unique Oxipay Device Id will be generated for that terminal. There will be facility to bulk generate these ids.
+
+ 2. Once the POS technician has the Oxipay Device ID, he can invoke the DeviceSetup API from the terminal.
+
+<strong>Notes:</strong>
+
+ * The oxipay device ids are for one time use only. Once used, Oxipay will invalidate them.
+ * The oxipay device ids will have an expiration time (yet to decide how long)
+ * The final goal is to have the POS portal fully functional, including ability of user management. 
+

@@ -1,6 +1,6 @@
 This sections details the various Oxipay APIs that can be used by POS to process in-store transactions.
 
-## Device Setup
+## Device Registration
 
 These set of endpoints will enable POS to create/reset private keys that will be used to digitally sign the messages between POS and Oxipay.
 
@@ -15,7 +15,8 @@ This endpoint will be used to create a device specific key using the shared priv
 Parameter &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;| Type | Description
 ----------|------|-------------
 merchantId | Unicode string | Merchant identifier as defined by Oxipay
-deviceId | Unicode string | Unique device identifier for the POS terminal
+posDeviceId | Unicode string | Unique device identifier for the POS terminal
+clientDeviceId | Unicode string | Oxipay generated device ID for this terminal (this is globally unique)
 operatorId | Unicode string | ID of POS/terminal operator
 firmwareVersion | Unicode string | current firmware version of POS device
 company | Unicode string | POS company name
@@ -134,7 +135,7 @@ Parameter &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&n
 posTransactionRef | Unicode string | A transaction reference from POS
 merchantId | Unicode string | Merchant identifier as defined by Oxipay
 amount | decimal | Requested adjustment amount
-adjustmentCode | Unicode string | Requested amount for adjustment
+receipt | Unicode string | POS's receipt number for the original transaction
 deviceId | Unicode string | Unique device identifier for the POS terminal
 operatorId | Unicode string | ID of POS/terminal operator
 firmwareVersion | Unicode string | current firmware version of POS device
