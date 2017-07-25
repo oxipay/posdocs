@@ -1,8 +1,8 @@
-# About Oxipay 
+<h1>About Oxipay</h1> 
 
 <a href="https://oxipay.com.au/">Oxipay</a> is an interest-free consumer-finance service that integrates with a number of leading eCommerce solutions and POS systems.
 
-# About posdocs
+<h1>About posdocs</h1>
 
 This site provides information on how to integrate a POS system with Oxipay. Among other things, you will find information about the following:
 

@@ -9,7 +9,6 @@ pages:
     - Receipt: 'process/receipt.md'
     - Sales Adjustment: 'process/sales_adjustment.md'
 - API Reference: 
-    - Device Registration: 'api/device_registration.md'
     - Create Key: 'api/create_key.md'
     - Process Authorisation: 'api/process_authorisation.md'
     - Send Receipt: 'api/send_receipt.md'
@@ -18,7 +17,9 @@ pages:
 - Protocols: 
     - Communication Protocols: 'protocols/communication_protocols.md'
     - Message Protocols: 'protocols/message_protocols.md'
-- Security: 'security/index.md'
+- Security: 
+    - Device Initialisation: 'security/device_initialisation.md'
+    - Signature Generation: 'security/signature_generation.md'
 - Testing: 'testing/index.md'
 theme: readthedocs
 extra_css: [css/jquery.modal.min.css, css/custom.css]
