@@ -1,5 +1,3 @@
-## Device Initialisation / Setup
-
 <strong>API reference: <a href="/resources/api_reference/#create-key">CreateKey</a></strong>
 
 This section describes the process of registering a POS device with Oxipay. This registration process will ensure that Oxipay registers the POS device with a unique identifier and issues a device specific key that can be used by that device to digitally sign all traffic.
