@@ -1,8 +1,7 @@
 site_name: Oxipay POS Integration
 pages:
 - Home: 'index.md'
-- Processes: 
-    - Device Initialisation: 'process/device_initialisation.md'        
+- Processes:         
     - Customer Initiated Flow: 'process/customer_initiated_flow.md'
     - Merchant Initiated Flow: 'process/merchant_initiated_flow.md'
     - Invite: 'process/invite.md'        
@@ -20,6 +19,11 @@ pages:
 - Security: 
     - Device Initialisation: 'security/device_initialisation.md'
     - Signature Generation: 'security/signature_generation.md'
-- Testing: 'testing/index.md'
+- Testing: 
+    - Test Create Key: 'testing/create_key.md'
+    - Test Process Authorisation: 'testing/process_authorisation.md'
+    - Test Send Receipt: 'testing/send_receipt.md'
+    - Test Invite: 'testing/invite.md'
+    - Test Sales Adjustment: 'testing/sales_adjustment.md'
 theme: readthedocs
 extra_css: [css/jquery.modal.min.css, css/custom.css]
