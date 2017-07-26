@@ -1,5 +1,7 @@
 For Testing the "CreateKey" API possible response, here list of the parameters on Request. and the backend server will response accordingly
 
+**Fake Key for generate the signature: "1234567890"**
+
 **Assumptions:**
 
 1. All "Createkey" API Request's required parameters has been populated.
