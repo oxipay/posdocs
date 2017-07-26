@@ -6,8 +6,9 @@ For Testing the "CreateKey" API possible response, here list of the parameters o
 
 2. HMAC has been generated on the payload and been put on the signature 
 
-3. invaild signature will return Failed StatusCode therefore not listed below.
+3. Invaild signature will return Failed StatusCode therefore not listed below.
 
+4. Any request paramters that not listed below will return Error Status
 
 **Method:** *CreateKey*
 
