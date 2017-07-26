@@ -8,7 +8,7 @@ For Testing the "Invite" API possible response, here list of the parameters on R
 
 3. Invaild signature will return Failed StatusCode therefore not listed below.
 
-4. Any request paramters that not listed below will return Error Status
+4. Any request paramters combindation that not listed below will return Error Status
 
 **Method:** *Invite*
 

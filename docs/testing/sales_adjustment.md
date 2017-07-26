@@ -8,7 +8,7 @@ For Testing the "ProcessAdjustment" API possible response, here list of the para
 
 3. Invaild signature will return Failed StatusCode therefore not listed below.
 
-4. Any request paramters that not listed below will return Error Status
+4. Any request paramters combindation that not listed below will return Error Status
 
 **Method:** *ProcessAdjustment*
 
