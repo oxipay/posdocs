@@ -2,7 +2,6 @@ site_name: Oxipay POS Integration
 pages:
 - Home: 'index.md'
 - Processes: 
-    - Device Initialisation: 'process/device_initialisation.md'        
     - Customer Initiated Flow: 'process/customer_initiated_flow.md'
     - Merchant Initiated Flow: 'process/merchant_initiated_flow.md'
     - Invite: 'process/invite.md'        
@@ -15,11 +14,12 @@ pages:
     - Invite: 'api/invite.md'
     - Sales Adjustment: 'api/sales_adjustment.md'
 - Protocols: 
-    - Communication Protocols: 'protocols/communication_protocols.md'
+    - Transport Protocols: 'protocols/transport_protocols.md'
     - Message Protocols: 'protocols/message_protocols.md'
 - Security: 
     - Device Initialisation: 'security/device_initialisation.md'
     - Signature Generation: 'security/signature_generation.md'
+    - Transport Layer Security: 'security/transport_layer_security.md'
 - Testing: 'testing/index.md'
 theme: readthedocs
 extra_css: [css/jquery.modal.min.css, css/custom.css]
