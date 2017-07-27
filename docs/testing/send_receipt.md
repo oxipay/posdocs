@@ -16,7 +16,7 @@ For Testing the "SendReceipt" API possible response, here list of the parameters
 
 **StatusCode OutComes by Request Parameters**
 **Notes.**
-"####" means any 4 charaters
+"####" means any 4 charaters 
 
 StatusCode | merchantId | clientDeviceId 
 -----------|------------|----------------
