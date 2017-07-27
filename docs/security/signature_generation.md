@@ -1,4 +1,4 @@
-<h1>Signature generation</h1>
+<h3>Signature generation</h3>
 
 All Oxipay APIs are publicly accessible. In order to prevent against request-tampering, man-in-the-middle attacks, and other malicious behaviour, Oxipay requires all API requests to include a digital signature and will include a digital signature on all API responses.
 
