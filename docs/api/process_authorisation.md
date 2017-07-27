@@ -2,7 +2,7 @@ This endpoint will process an authorisation to finalise the transaction
 
 **Method:** *ProcessAuthorisation*
 
-**Request:**
+<h3>Request</h3>
 
 Parameter &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;| Type | Description
 -----------|------|-------------
@@ -18,10 +18,30 @@ signature | Hex string case-insensitive | Payload that is signed using HMAC-SHA2
 echo <code class="optional">optional</code> | true/false | Determines if Oxipay need to echo back the payload (false by default)
 additional <code class="optional">optional</code> | Key-Value pair | A map that can be populated with additional information
 
-**Response:**
+<h3>Response</h3>
 
 Parameter | Type | Description
 -----------|------|-------------
 statusCode | Unicode string | Codes related to Approved/Declined/Error
 message | Unicode string | A string explaining the status above. Example: For an Approval, what will be customer’s first direct debit date. For an Error: Bank declined – Insufficient Funds 
 signature | Hex string case-insensitive | Payload that is signed using HMAC-SHA256 using a device specific key 
+
+<h3>Testing</h3>
+
+Using the test WSDL <code>https://testpos.oxipay.com.au:53821/Service/svc?wsdl</code>; use the following request parameters to generate a predictable response:
+
+Request -> preApprovalCode | Response -> StatusCode
+-----------|------------
+#######1 | Approved
+#######2 | Declined
+#######3 | Error
+
+<span style="color:grey;"><b>#</b> signifies a alphanumeric digit</span>
+
+**Testing Assumptions**
+
+1. All required fields must be populated. Missing required fields will result in an "Error" StatusCode being returned.
+2. Fields will still be validated. An invalid field will result in an "Error" StatusCode being returned.
+3. To generate the signature, use a device-signing-key of "1234567890".
+4. An invaild signature will return a "Failed" StatusCode.
+5. Any request paramter combination not explicitly listed above will result in an "Error" StatusCode being returned.
