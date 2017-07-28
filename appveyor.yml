@@ -18,7 +18,7 @@ on_success:
       Set-DefaultAWSRegion -Region ap-southeast-2
       Write-Host "Encrypted AWS access key: '$env:access_key'"
       Write-Host "Encrypted secret key: '$env:secret_key'"
-      Set-AWSCredentials -AWSAccessKeyId $env:access_key -AWSSecretKey $env:secret_key
+      Set-AWSCredentials -AccessKey $env:access_key -SecretKey $env:secret_key
       $existingItems = Get-S3Object -BucketName $bucketName
       Write-Host "Removing objects from '$bucketName'"
       foreach($s3object in $existingItems) {
