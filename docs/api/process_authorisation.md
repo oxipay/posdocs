@@ -44,7 +44,7 @@ Request -> preApprovalCode | Response -> status | Response -> code
 ######07 | Failed | FPRA07
 ######10 | Error | EVAL01
 ######11 | Error | ESIG01
-######12 | Error | EISE01
+any other value | Error | EISE01
 
 <span style="color:grey;"><b>#</b> signifies an alphanumeric digit</span>
 
@@ -52,4 +52,3 @@ Request -> preApprovalCode | Response -> status | Response -> code
 
 * All required fields must be populated and all fields will still be validated. Missing required fields or invalid data will result in an validation error
 * To generate the signature, use a device-signing-key of "1234567890"
-* Any request parameter combination not explicitly listed above will result in an internal server error
