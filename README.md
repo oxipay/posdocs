@@ -1,9 +1,9 @@
-# POS docs
+# POS docs [![Build status](https://ci.appveyor.com/api/projects/status/qrk2obnd8crqy271/branch/master?svg=true)](https://ci.appveyor.com/project/oxipay/posdocs/branch/master)
 
 ## Setting up your environment
 
 To get your mkdocs environment configured; install the following:
-* chocolatey
+* [chocolatey](https://chocolatey.org/)
 * python:
 
         cinst python -y
