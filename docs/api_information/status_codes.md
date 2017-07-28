@@ -12,8 +12,8 @@ Failed | FPRA02 | ProcessAuthorisation | Declined due to insufficient funds for 
 Failed | FPRA03 | ProcessAuthorisation | Declined as communication to the bank is currently unavailable
 Failed | FPRA04 | ProcessAuthorisation | Declined because the buyer limit has been exceeded
 Failed | FPRA05 | ProcessAuthorisation | Declined due to negative payment history for the buyer
-Failed | FPRA05 | ProcessAuthorisation | Declined because the credit-card used for the deposit is expired
-Failed | FPRA06 | ProcessAuthorisation | Declined because supplied posTransactionRef has already been processed
+Failed | FPRA06 | ProcessAuthorisation | Declined because the credit-card used for the deposit is expired
+Failed | FPRA07 | ProcessAuthorisation | Declined because supplied posTransactionRef has already been processed
 Failed | FPSA01 | ProcessSalesAdjustment | Unable to find the specified POS transaction reference
 Failed | FPSA02 | ProcessSalesAdjustment | This contract has already been completed
 Failed | FPSA03 | ProcessSalesAdjustment | This Oxipay contract has previously been cancelled and all payments collected have been refunded to the buyer

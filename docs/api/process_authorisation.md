@@ -35,12 +35,13 @@ Please contact <a href="mailto:support@oxipay.com.au">support@oxipay.com.au</a> 
 Request -> preApprovalCode | Response -> status | Response -> code
 -----------|-----------|-----------
 ######01 | Success | SPRA01
-######02 | Failed | FPRA01
-######03 | Failed | FPRA02
-######04 | Failed | FPRA03
-######05 | Failed | FPRA04
-######06 | Failed | FPRA05
-######07 | Failed | FPRA06
+######01 | Failed | FPRA01
+######02 | Failed | FPRA02
+######03 | Failed | FPRA03
+######04 | Failed | FPRA04
+######05 | Failed | FPRA05
+######06 | Failed | FPRA06
+######07 | Failed | FPRA07
 ######10 | Error | EVAL01
 ######11 | Error | ESIG01
 ######12 | Error | EISE01
