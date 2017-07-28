@@ -1,9 +1,9 @@
-# POS docs
+# posdocs [![Build status](https://ci.appveyor.com/api/projects/status/qrk2obnd8crqy271/branch/master?svg=true)](https://ci.appveyor.com/project/oxipay/posdocs/branch/master)
 
 ## Setting up your environment
 
 To get your mkdocs environment configured; install the following:
-* chocolatey
+* [chocolatey](https://chocolatey.org/)
 * python:
 
         cinst python -y
@@ -15,8 +15,8 @@ Note: you might need to ensure cinst, python, & pip are all in your path.
 
 ## Updating the documentation
 
-The posdocs repository has all the documentation in markdown format. Commits to the posdocs repo will automatically publish (via appveyor) the static site content to AWS S3
-http://posdocs.oxipay.com.au.s3-website-ap-southeast-2.amazonaws.com
+The posdocs repository has all the documentation in markdown format. Commits to the master branch of the posdocs repo will automatically publish (via appveyor) the static site content to AWS S3
+http://posdocs.oxipay.com.au
 
 To update the documentation the following steps need to be done.
 
