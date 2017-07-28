@@ -1,15 +1,24 @@
 site_name: Oxipay POS Integration
 pages:
 - Home: 'index.md'
-- Resources:  
-   - Introduction: 'resources/introduction.md'
-   - Processes: 
-        - Device Initialisation / Setup: 'resources/processes/device_setup.md'        
-        - Customer Initiated: 'resources/processes/customer_initiated.md'
-        - Merchant Initiated: 'resources/processes/merchant_initiated.md'
-        - Invite: 'resources/processes/invite.md'        
-        - Receipt: 'resources/processes/receipt.md'
-        - SalesAdjustment: 'resources/processes/adjustment.md'
-   - API Reference: 'resources/api_reference.md'
+- Processes:
+    - Customer Initiated Flow: 'process/customer_initiated_flow.md'
+    - Merchant Initiated Flow: 'process/merchant_initiated_flow.md'
+    - Sales Adjustment: 'process/sales_adjustment.md'
+- API Reference: 
+    - Create Key: 'api/create_key.md'
+    - Invite: 'api/invite.md'
+    - Process Authorisation: 'api/process_authorisation.md'
+    - Send Receipt: 'api/send_receipt.md'
+    - Process Sales Adjustment: 'api/process_sales_adjustment.md'
+- Additional API Information: 
+    - Status Codes: 'api_information/status_codes.md'
+- Supported Protocols: 
+    - Transport Protocols: 'protocols/transport_protocols.md'
+    - Communication Protocols: 'protocols/communication_protocols.md'
+- Security: 
+    - Device Initialisation: 'security/device_initialisation.md'
+    - Signature Generation: 'security/signature_generation.md'
+    - Transport Layer Security: 'security/transport_layer_security.md'
 theme: readthedocs
 extra_css: [css/jquery.modal.min.css, css/custom.css]
