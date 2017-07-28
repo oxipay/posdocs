@@ -34,7 +34,7 @@ Please contact <a href="mailto:support@oxipay.com.au">support@oxipay.com.au</a> 
 
 Request -> preApprovalCode | Response -> status | Response -> code
 -----------|-----------|-----------
-0####### | Success | SPRA01
+00###### | Success | SPRA01
 10###### | Failed | FPRA01
 11###### | Failed | FPRA02
 12###### | Failed | FPRA03
@@ -42,7 +42,7 @@ Request -> preApprovalCode | Response -> status | Response -> code
 14###### | Failed | FPRA05
 15###### | Failed | FPRA06
 16###### | Failed | FPRA07
-2####### | Error | EVAL01
+20###### | Error | EVAL01
 any other value | Error | EISE01
 
 <span style="color:grey;"><b>#</b> signifies an alphanumeric digit</span>

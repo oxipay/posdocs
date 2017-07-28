@@ -21,4 +21,5 @@ pages:
     - Signature Generation: 'security/signature_generation.md'
     - Transport Layer Security: 'security/transport_layer_security.md'
 theme: readthedocs
+theme_dir: 'theme'
 extra_css: [css/jquery.modal.min.css, css/custom.css]
