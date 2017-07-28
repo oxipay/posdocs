@@ -1,3 +1,5 @@
+<h3>Transport Layer Security</h3>
+
 All API communications will be over <a href="https://en.wikipedia.org/wiki/HTTPS">HTTPS</a> (HTTP over TLS). The minimum supported version is TLS 1.0. That being said, we strongly recommend TLS 1.2 as this has a number of cryptographic improvements in the cipher suites.
 
 We understand TLS 1.0 is not PCI DSS complient, however, none of the POS APIs include any credit-card information (encrypted, encoded or otherwise) in any of the requests or reponses, to and from Oxipay. As such there are no PCI DSS concerns.
