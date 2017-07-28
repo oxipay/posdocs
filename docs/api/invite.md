@@ -28,6 +28,8 @@ signature | Hex string case-insensitive | Payload that is signed using HMAC-SHA2
 
 <h3>Testing</h3>
 
+Please contact <a href="mailto:support@oxipay.com.au">support@oxipay.com.au</a> to get access to the test/dummy APIs.
+
 Request -> purchaseAmount | Response -> status | Response -> code
 -----------|-----------|-----------
 ##.#1 | Success | SINV01
@@ -41,4 +43,4 @@ Request -> purchaseAmount | Response -> status | Response -> code
 
 * All required fields must be populated and all fields will still be validated. Missing required fields or invalid data will result in an validation error
 * To generate the signature, use a device-signing-key of "1234567890"
-* Any request paramter combination not explicitly listed above will result in an internal server error
+* Any request parameter combination not explicitly listed above will result in an internal server error
