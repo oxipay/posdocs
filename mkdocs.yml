@@ -7,10 +7,10 @@ pages:
     - Sales Adjustment: 'process/sales_adjustment.md'
 - API Reference: 
     - Create Key: 'api/create_key.md'
+    - Invite: 'api/invite.md'
     - Process Authorisation: 'api/process_authorisation.md'
     - Send Receipt: 'api/send_receipt.md'
-    - Invite: 'api/invite.md'
-    - Sales Adjustment: 'api/sales_adjustment.md'
+    - Process Sales Adjustment: 'api/process_sales_adjustment.md'
 - Additional API Information: 
     - Status Codes: 'api_information/status_codes.md'
 - Supported Protocols: 
