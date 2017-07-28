@@ -32,8 +32,8 @@ Please contact <a href="mailto:support@oxipay.com.au">support@oxipay.com.au</a> 
 
 Request -> purchaseAmount | Response -> status | Response -> code
 -----------|-----------|-----------
-##.#1 | Success | SINV01
-##.#2 | Error | EVAL01
+##.01 | Success | SINV01
+##.02 | Error | EVAL01
 any other value | Error | EISE01
 
 <span style="color:grey;"><b>#</b> signifies a numeric digit</span>

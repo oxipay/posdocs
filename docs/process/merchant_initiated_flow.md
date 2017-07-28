@@ -1,7 +1,7 @@
 <strong>API references: </strong>
 
- - <a href="/resources/api_reference/#process-authorisation">ProcessAuthorisation</a>
- - <a href="/resources/api_reference/#invite">Invite</a>
+ - <a href="/api/process_authorisation/">ProcessAuthorisation</a>
+ - <a href="/api/invite/">Invite</a>
 
 This flow is a two step process. It applies where the pre-approval code is not available with the customer. POS can then facilitate the process by sending an invite (for the customer)   to Oxipay. Oxipay will send a registration/login link to customer for them to obtain a pre-approval code. From this point onwards, the rest of the process is same as customer-initiated flow.
 
