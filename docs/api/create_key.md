@@ -35,10 +35,8 @@ Request -> clientDeviceId | Response -> status | Response -> code
 -----------|-----------|-----------
 1 | Success | SCRK01
 2 | Error | EVAL01
-3 | Error | ESIG01
 any other value | Error | EISE01
 
 **Testing Assumptions**
 
-* All required fields must be populated and all fields will still be validated. Missing required fields or invalid data will result in an validation error
-* To generate the signature, use a device-signing-key of "1234567890"
+* To generate the signature, use a device-signing-key of "1234567890". A invalid signature will cause an ESIG01 Error.

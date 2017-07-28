@@ -34,21 +34,19 @@ Please contact <a href="mailto:support@oxipay.com.au">support@oxipay.com.au</a> 
 
 Request -> preApprovalCode | Response -> status | Response -> code
 -----------|-----------|-----------
-######01 | Success | SPRA01
-######01 | Failed | FPRA01
-######02 | Failed | FPRA02
-######03 | Failed | FPRA03
-######04 | Failed | FPRA04
-######05 | Failed | FPRA05
-######06 | Failed | FPRA06
-######07 | Failed | FPRA07
-######10 | Error | EVAL01
-######11 | Error | ESIG01
+0####### | Success | SPRA01
+10###### | Failed | FPRA01
+11###### | Failed | FPRA02
+12###### | Failed | FPRA03
+13###### | Failed | FPRA04
+14###### | Failed | FPRA05
+15###### | Failed | FPRA06
+16###### | Failed | FPRA07
+2####### | Error | EVAL01
 any other value | Error | EISE01
 
 <span style="color:grey;"><b>#</b> signifies an alphanumeric digit</span>
 
 **Testing Assumptions**
 
-* All required fields must be populated and all fields will still be validated. Missing required fields or invalid data will result in an validation error
-* To generate the signature, use a device-signing-key of "1234567890"
+* To generate the signature, use a device-signing-key of "1234567890". A invalid signature will cause an ESIG01 Error.
