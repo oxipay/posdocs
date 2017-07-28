@@ -1,5 +1,7 @@
 <h3>Statuses and codes</h3>
 
+The following table defines statuses, codes, and messages returned by the Oxipay APIs. The reason for the unique codes is to make life a bit easier for integrators that want to display their own custom messages.
+
 Status | Code | API | Message
 ----------|----------|----------|----------
 Success | SCRK01 | CreateKey | Success
