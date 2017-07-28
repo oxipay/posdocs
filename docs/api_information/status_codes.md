@@ -1,6 +1,6 @@
 <h3>Statuses and codes</h3>
 
-Status | Code | API | Description
+Status | Code | API | Message
 ----------|----------|----------|----------
 Success | SCRK01 | CreateKey | Success
 Success | SINV01 | Invite | Success
@@ -14,11 +14,11 @@ Failed | FPRA04 | ProcessAuthorisation | Declined because the buyer limit has be
 Failed | FPRA05 | ProcessAuthorisation | Declined due to negative payment history for the buyer
 Failed | FPRA05 | ProcessAuthorisation | Declined because the credit-card used for the depoit is expired
 Failed | FPRA06 | ProcessAuthorisation | Declined because supplied posTransactionRef has already been processed
-Failed | FPSA01 | ProcessSalesAdjustment | TBD
-Failed | FPSA02 | ProcessSalesAdjustment | TBD
-Failed | FPSA03 | ProcessSalesAdjustment | TBD
-Failed | FPSA04 | ProcessSalesAdjustment | TBD
-Failed | FPSA05 | ProcessSalesAdjustment | TBD
+Failed | FPSA01 | ProcessSalesAdjustment | Unable to find the specified POS transaction reference
+Failed | FPSA02 | ProcessSalesAdjustment | This contract has already been completed
+Failed | FPSA03 | ProcessSalesAdjustment | This Oxipay contract has previously been cancelled and all payments collected have been refunded to the buyer
+Failed | FPSA04 | ProcessSalesAdjustment | Sales adjustment cannot be processed for this amount
+Failed | FPSA05 | ProcessSalesAdjustment | Unable to process a sales adjustment for this contract. Please contact Merchant Services on 1300 413 902 during business hours for further information
 Error | EVAL01 | * | Validation error
 Error | ESIG01 | * | Signature mismatch error
 Error | EISE01 | * | Internal server error
