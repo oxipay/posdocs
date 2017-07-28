@@ -18,5 +18,23 @@ On the Oxipay side, we'll perform the same algorithm with the same device-signin
 Below is a C#.NET code snippet that demonstrates how a signature might be generated:
 
 ```cs
-  //TODO
+
+private const string signatureKeyName = "signature";
+
+public static string GenerateHMAC(string apiKey, IDictionary<string,string> payloadValues)
+{
+  using (var hmac = new HMACSHA256(Encoding.UTF8.GetBytes(apiKey)))
+  {
+      string payloadSignature = 
+      payloadValues
+        .Where(kvp=> !kvp.Key.In(signatureKeyName))
+        .OrderBy(kvp=>kvp.Key)
+        .Select(kvp => $"{kvp.Key}{kvp.Value}")
+        .Aggregate((current, next) => $"{current}{next}");
+
+      var rawHmac = hmac.ComputeHash(Encoding.UTF8.GetBytes(payloadSignature));
+
+      return BitConverter.ToString(rawHmac).Replace("-", string.Empty).ToLower();
+  }
+}
 ```

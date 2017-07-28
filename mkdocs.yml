@@ -14,13 +14,11 @@ pages:
 - Additional API Information: 
     - Status Codes: 'api_information/status_codes.md'
 - Supported Protocols: 
-    - Communication Protocols: 'protocols/communication_protocols.md'
     - Transport Protocols: 'protocols/transport_protocols.md'
+    - Communication Protocols: 'protocols/communication_protocols.md'
 - Security: 
     - Device Initialisation: 'security/device_initialisation.md'
     - Signature Generation: 'security/signature_generation.md'
     - Transport Layer Security: 'security/transport_layer_security.md'
 theme: readthedocs
 extra_css: [css/jquery.modal.min.css, css/custom.css]
-extra:
-    version: 1.0
