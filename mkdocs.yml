@@ -1,6 +1,7 @@
 site_name: Oxipay POS Integration
 pages:
 - Home: 'index.md'
+- Ubiquitous Language: 'ubiquitous_language.md'
 - Processes:
     - Buyer Initiated Flow: 'process/buyer_initiated_flow.md'
     - Seller Initiated Flow: 'process/seller_initiated_flow.md'
