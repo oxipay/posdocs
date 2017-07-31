@@ -2,8 +2,8 @@ site_name: Oxipay POS Integration
 pages:
 - Home: 'index.md'
 - Processes:
-    - Customer Initiated Flow: 'process/customer_initiated_flow.md'
-    - Merchant Initiated Flow: 'process/merchant_initiated_flow.md'
+    - Buyer Initiated Flow: 'process/buyer_initiated_flow.md'
+    - Seller Initiated Flow: 'process/seller_initiated_flow.md'
     - Sales Adjustment: 'process/sales_adjustment.md'
 - API Reference: 
     - Create Key: 'api/create_key.md'

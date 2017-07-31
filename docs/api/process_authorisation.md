@@ -9,8 +9,8 @@ Parameter &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&n
 posTransactionRef | Unicode string | A transaction reference from POS
 merchantId | Unicode string | Merchant identifier as defined by Oxipay
 purchaseAmount | decimal | Total purchase amount
-financeAmount | decimal | Amount that the customer wants the finance for from Oxipay
-preApprovalCode | Unicode string | The pre-approval code obtained from barcode that the customer presented
+financeAmount | decimal | Amount that the buyer wants the finance for from Oxipay
+preApprovalCode | Unicode string | The pre-approval code obtained from barcode that the buyer is presented
 deviceId | Unicode string | Unique device identifier for the POS terminal
 operatorId | Unicode string | ID of POS/terminal operator
 firmwareVersion | Unicode string | current firmware version of POS device
@@ -24,7 +24,7 @@ Parameter | Type | Description
 -----------|------|-------------
 status | Unicode string | Success/Failure/Error
 code | Unicode string | A code that maps to a <a href="/api_information/status_codes/">specific reason</a>
-message | Unicode string | A string explaining the status/code above. Example: For an Approval, what will be customer’s first direct debit date. For an Error: Bank declined – Insufficient Funds 
+message | Unicode string | A string explaining the status/code above. Example: For an Approval, what will be buyer’s first direct debit date. For an Error: Bank declined – Insufficient Funds 
 requestData | Key-Value pair | If echo was set to <code>true</code> on the request, will contain a flattened key-value pair array of all data sent over the wire
 signature | Hex string case-insensitive | Payload that is signed using HMAC-SHA256 using a device specific key 
 

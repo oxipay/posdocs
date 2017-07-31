@@ -1,4 +1,4 @@
-This endpoint will be used to initiate a request that will send an invite to the customer to Login or Register with Oxipay so that they can get a pre-approval code.
+This endpoint will be used to initiate a request that will send an invite to the buyer to Login or Register with Oxipay so that they can get a pre-approval code.
 
 **Method:** *Invite*
 
@@ -7,7 +7,7 @@ This endpoint will be used to initiate a request that will send an invite to the
 Parameter &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;| Type | Description
 -----------|------|-------------
 merchantId | Unicode string | Merchant identifier as defined by Oxipay
-mobile | Unicode string | Customer’s mobile number
+mobile | Unicode string | Buyer’s mobile number
 purchaseAmount | decimal | Total purchase amount
 deviceId | Unicode string | Unique device identifier for the POS terminal
 operatorId | Unicode string | ID of POS/terminal operator
