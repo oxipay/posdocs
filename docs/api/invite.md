@@ -1,4 +1,4 @@
-This endpoint will be used to initiate a request that will send an invite to the customer to Login or Register with Oxipay so that they can get a pre-approval code.
+This endpoint will be used to initiate a request that will send an invite to the buyer to Login or Register with Oxipay so that they can get a pre-approval code.
 
 **Method:** *Invite*
 
@@ -7,7 +7,7 @@ This endpoint will be used to initiate a request that will send an invite to the
 Parameter &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;| Type | Description
 -----------|------|-------------
 merchantId | Unicode string | Merchant identifier as defined by Oxipay
-mobile | Unicode string | Customer’s mobile number
+mobile | Unicode string | Buyer’s mobile number
 purchaseAmount | decimal | Total purchase amount
 deviceId | Unicode string | Unique device identifier for the POS terminal
 operatorId | Unicode string | ID of POS/terminal operator
@@ -28,7 +28,7 @@ signature | Hex string case-insensitive | Payload that is signed using HMAC-SHA2
 
 <h3>Testing</h3>
 
-Please contact <a href="mailto:support@oxipay.com.au">support@oxipay.com.au</a> to get access to the test/dummy APIs.
+The following describes dummy API requests that return a predictable response. Please contact <a href="mailto:support@oxipay.com.au">support@oxipay.com.au</a> to get access to the test/dummy APIs.
 
 Request -> purchaseAmount | Response -> status | Response -> code
 -----------|-----------|-----------

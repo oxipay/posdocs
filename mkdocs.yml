@@ -1,9 +1,10 @@
 site_name: Oxipay POS Integration
 pages:
 - Home: 'index.md'
+- Ubiquitous Language: 'ubiquitous_language.md'
 - Processes:
-    - Customer Initiated Flow: 'process/customer_initiated_flow.md'
-    - Merchant Initiated Flow: 'process/merchant_initiated_flow.md'
+    - Buyer Initiated Flow: 'process/buyer_initiated_flow.md'
+    - Seller Initiated Flow: 'process/seller_initiated_flow.md'
     - Sales Adjustment: 'process/sales_adjustment.md'
 - API Reference: 
     - Create Key: 'api/create_key.md'
@@ -13,7 +14,9 @@ pages:
     - Process Sales Adjustment: 'api/process_sales_adjustment.md'
 - Additional API Information: 
     - Status Codes: 'api_information/status_codes.md'
-- Supported Protocols: 
+    - API Versioning: 'api_information/api_versioning.md'
+- Supported Standards/Protocols: 
+    - Barcode Standards: 'protocols/barcode_standards.md'
     - Transport Protocols: 'protocols/transport_protocols.md'
     - Communication Protocols: 'protocols/communication_protocols.md'
 - Security: 

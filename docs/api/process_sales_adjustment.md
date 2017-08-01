@@ -29,7 +29,7 @@ signature | Hex string case-insensitive | Payload that is signed using HMAC-SHA2
 
 <h3>Testing</h3>
 
-Please contact <a href="mailto:support@oxipay.com.au">support@oxipay.com.au</a> to get access to the test/dummy APIs.
+The following describes dummy API requests that return a predictable response. Please contact <a href="mailto:support@oxipay.com.au">support@oxipay.com.au</a> to get access to the test/dummy APIs.
 
 Request -> amount | Response -> status | Response -> code
 -----------|-----------|-----------
