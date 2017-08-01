@@ -14,6 +14,7 @@ pages:
     - Process Sales Adjustment: 'api/process_sales_adjustment.md'
 - Additional API Information: 
     - Status Codes: 'api_information/status_codes.md'
+    - API Versioning: 'api_information/api_versioning.md'
 - Supported Protocols: 
     - Transport Protocols: 'protocols/transport_protocols.md'
     - Communication Protocols: 'protocols/communication_protocols.md'
