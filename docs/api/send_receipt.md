@@ -6,7 +6,7 @@ Requests to this API should only be made when a temporary value is used as the *
 
 Parameter &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;| Type | Description
 -----------|------|-------------
-x_pos_transaction_ref | Unicode string | This could be the POS transaction ID or the receipt number. It must be the same reference that would get passed through on future *ProcessSalesAdjustment* requests.
+x_pos_transaction_ref | Unicode string | This must be the same reference that would get passed through on future *ProcessSalesAdjustment* requests.
 x_merchant_id | Unicode string | Merchant identifier as defined by Oxipay
 x_device_id | Unicode string | Unique device identifier for the POS terminal
 x_operator_id | Unicode string | ID of POS/terminal operator

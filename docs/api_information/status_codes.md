@@ -1,5 +1,11 @@
 <h3>Statuses and codes</h3>
 
+There are 3 unique statuses as follows:
+
+* **Success**: When the intent of the request is successful e.g. an Approval from the *ProcessAuthorisation* API.
+* **Failed**: When the intent of the request is unsuccessful e.g. a Decline from the *ProcessAuthorisation* API.
+* **Error**: When there is a problem with the request or an unexpected error.
+
 The following table defines statuses, codes, and messages returned by the Oxipay APIs. The reason for the unique codes is to make life a bit easier for integrators that want to display their own custom messages.
 
 Status | Code | API | Message

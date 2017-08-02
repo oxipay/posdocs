@@ -6,7 +6,7 @@ This endpoint will process an authorisation to finalise the transaction
 
 Parameter &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;| Type | Description
 -----------|------|-------------
-x_pos_transaction_ref | Unicode string | This could be the POS transaction ID or the receipt number. It must be the same reference that would get passed through on future *ProcessSalesAdjustment* requests. This field is mandatory - if the POS system does not have this information at the time of the request, it should pass through a temporary unique value (e.g. a GUID) so that Oxipay has the information it needs to process retry attempts. If a temporary value *is* used; a subsequent request to *SendReceipt* **must** be made when the actual transaction reference is known by the POS system, so that Oxipay can successfully reconcile future *ProcessSalesAdjustment* requests.
+x_pos_transaction_ref | Unicode string | This must be the same reference that would get passed through on future *ProcessSalesAdjustment* requests. This field is mandatory - if the POS system does not have this information at the time of the request, it should pass through a temporary unique value (e.g. a GUID) so that Oxipay has the information it needs to process retry attempts. If a temporary value *is* used; a subsequent request to *SendReceipt* **must** be made when the actual transaction reference is known by the POS system, so that Oxipay can successfully reconcile future *ProcessSalesAdjustment* requests.
 x_merchant_id | Unicode string | Merchant identifier as defined by Oxipay
 x_purchase_amount | decimal | Total purchase amount
 x_finance_Amount | decimal | Amount that the customer wants the finance for from Oxipay

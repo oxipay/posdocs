@@ -3,10 +3,10 @@
  - <a href="/api/process_authorisation/">ProcessAuthorisation</a>
  - <a href="/api/invite/">Invite</a>
 
-The merchant-initiated flow occurs when a customer arrives at the point-of-sale without a pre-approval code. Ideally, the customer would already have a pre-approval code as the customer-initiated flow is much more streamlined and synchronous*. Every effort should be made by ratailers to funnel customers to the <a href="/process/customer_initiated_flow/">customer-initiated</a> flow. These efforts might include the following:
+The merchant-initiated flow occurs when a customer arrives at the POI without a pre-approval code. Ideally, the customer would already have a pre-approval code as the customer-initiated flow is much more streamlined and synchronous*. Every effort should be made by ratailers to funnel customers to the <a href="/process/customer_initiated_flow/">customer-initiated</a> flow. These efforts might include the following:
 
 * Oxipay tags on products that can be read by mobile devices (e.g. QR code) that take customers to the registration screen.
-* Sales people driving customers to register before getting to the point of sale.
+* Sales people driving customers to register before getting to the POI.
 
 The merchant-initiated flow is a two step process. The first part involves the POS system brokering an Oxipay invite to the customer (by sending an SMS with a link to the registration screen). Once the customer has registered, the rest of the process is same as customer-initiated flow.
 

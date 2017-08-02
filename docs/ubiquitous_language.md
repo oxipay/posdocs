@@ -5,7 +5,7 @@ The following table defines some Oxipay related terminology:
 Term | Description
 ----------|----------
 POS | Point of sale. When used in a sentence, we're generally referring to a POS *system*
-POI | point of interaction
+POI | Point of interaction
 Customer | A buyer
 Merchant | A retailer/seller
 Pre-authorisation | The process of determining if someone is eligible to use Oxipay and what is their finance limit
