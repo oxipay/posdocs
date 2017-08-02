@@ -6,33 +6,32 @@ This endpoint will process an authorisation to finalise the transaction
 
 Parameter &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;| Type | Description
 -----------|------|-------------
-posTransactionRef | Unicode string | A transaction reference from POS
-merchantId | Unicode string | Merchant identifier as defined by Oxipay
-purchaseAmount | decimal | Total purchase amount
-financeAmount | decimal | Amount that the buyer wants the finance for from Oxipay
-preApprovalCode | Unicode string | The pre-approval code obtained from barcode that the buyer is presented
-deviceId | Unicode string | Unique device identifier for the POS terminal
-operatorId | Unicode string | ID of POS/terminal operator
-firmwareVersion | Unicode string | current firmware version of POS device
+x_pos_transaction_ref | Unicode string | This must be the same reference that would get passed through on future *ProcessSalesAdjustment* requests. This field is mandatory - if the POS system does not have this information at the time of the request, it should pass through a temporary unique value (e.g. a GUID) so that Oxipay has the information it needs to process retry attempts. If a temporary value *is* used; a subsequent request to *SendReceipt* **must** be made when the actual transaction reference is known by the POS system, so that Oxipay can successfully reconcile future *ProcessSalesAdjustment* requests.
+x_merchant_id | Unicode string | Merchant identifier as defined by Oxipay
+x_purchase_amount | decimal | Total purchase amount
+x_finance_Amount | decimal | Amount that the customer wants the finance for from Oxipay
+x_pre_approval_code | Unicode string | The pre-approval code obtained from barcode that the customer is presented
+x_device_id | Unicode string | Unique device identifier for the POS terminal
+x_operator_id | Unicode string | ID of POS/terminal operator
+x_firmware_version | Unicode string | current firmware version of POS device
+tracking_data <code class="optional">optional</code> | Associative array | A map that can be populated with additional tracking/state information that will get passed back in the response
 signature | Hex string case-insensitive | Payload that is signed using HMAC-SHA256 using a device specific key
-echo <code class="optional">optional</code> | true/false | Determines if Oxipay need to echo back the payload (false by default)
-additionalData <code class="optional">optional</code> | Key-Value pair | A map that can be populated with additional information
 
 <h3>Response</h3>
 
 Parameter | Type | Description
 -----------|------|-------------
-status | Unicode string | Success/Failure/Error
-code | Unicode string | A code that maps to a <a href="/api_information/status_codes/">specific reason</a>
-message | Unicode string | A string explaining the status/code above. Example: For an Approval, what will be buyer’s first direct debit date. For an Error: Bank declined – Insufficient Funds 
-requestData | Key-Value pair | If echo was set to <code>true</code> on the request, will contain a flattened key-value pair array of all data sent over the wire
+x_status | Unicode string | Success/Failure/Error
+x_code | Unicode string | A code that maps to a <a href="/api_information/status_codes/">specific reason</a>
+x_message | Unicode string | A string explaining the status/code above. Example: For an Approval, what will be customer’s first direct debit date. For an Error: Bank declined – Insufficient Funds 
+tracking_data | Associative array | Echoes tracking_data sent on the request
 signature | Hex string case-insensitive | Payload that is signed using HMAC-SHA256 using a device specific key 
 
 <h3>Testing</h3>
 
 The following describes dummy API requests that return a predictable response. Please contact <a href="mailto:support@oxipay.com.au">support@oxipay.com.au</a> to get access to the test/dummy APIs.
 
-Request -> preApprovalCode | Response -> status | Response -> code
+Request -> x_pre_approval_code | Response -> x_status | Response -> x_code
 -----------|-----------|-----------
 00###### | Success | SPRA01
 10###### | Failed | FPRA01

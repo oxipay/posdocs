@@ -8,7 +8,7 @@ The signing mechanism used by Oxipay is based on <a href="https://en.wikipedia.o
 
 To generate a digital signature, do the following steps:
 
-1. Create a string of all fields in the request (with the exception of the signature itself) as key-value pairs, sorted alphabetically, and concatenated without separators.
+1. Create a string of all "x_" fields (i.e. with a name starting with "x_") in the request as key-value pairs, sorted alphabetically, and concatenated without separators.
 2. Sign the message using HMAC_SHA256 to produce a signature.
 
 Add the 'signature' to the request and that's it!
@@ -18,19 +18,16 @@ On the Oxipay side, we'll perform the same algorithm with the same device-signin
 Below is a C#.NET code snippet that demonstrates how a signature might be generated:
 
 ```cs
-
-private const string signatureKeyName = "signature";
-
 public static string GenerateHMAC(string apiKey, IDictionary<string,string> payloadValues)
 {
   using (var hmac = new HMACSHA256(Encoding.UTF8.GetBytes(apiKey)))
   {
       string payloadSignature = 
-      payloadValues
-        .Where(kvp=> !kvp.Key.In(signatureKeyName))
-        .OrderBy(kvp=>kvp.Key)
-        .Select(kvp => $"{kvp.Key}{kvp.Value}")
-        .Aggregate((current, next) => $"{current}{next}");
+        payloadValues
+          .Where(kvp=> kvp.Key.StartsWith("x_"))
+          .OrderBy(kvp=>kvp.Key)
+          .Select(kvp => $"{kvp.Key}{kvp.Value}")
+          .Aggregate((current, next) => $"{current}{next}");
 
       var rawHmac = hmac.ComputeHash(Encoding.UTF8.GetBytes(payloadSignature));
 
