@@ -4,9 +4,11 @@ The following table defines some Oxipay related terminology:
 
 Term | Description
 ----------|----------
-Buyer | A customer
-Seller | A merchant/retailer
-Pre-authorisation | Determining if someone is eligible to use Oxipay and what is their finance limit
-Authorisation | Determining if someone can get finance approval with Oxipay for the purchase amount
+POS | Point of sale. When used in a sentence, we're generally referring to a POS *system*
+POI | point of interaction
+Customer | A buyer
+Merchant | A retailer/seller
+Pre-authorisation | The process of determining if someone is eligible to use Oxipay and what is their finance limit
+Authorisation | The process of determining if someone can get finance approval with Oxipay for the purchase amount
 Sales Adjustment | Full or partial refund of the Oxipay purchase
 GUDID | Globablly unique device ID

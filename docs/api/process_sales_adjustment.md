@@ -6,32 +6,30 @@ This endpoint will be used to process a Sales Adjustment at the point-of-sale. s
 
 Parameter &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;| Type | Description
 -----------|------|-------------
-posTransactionRef | Unicode string | A transaction reference from POS
-merchantId | Unicode string | Merchant identifier as defined by Oxipay
-amount | decimal | Requested adjustment amount
-receipt | Unicode string | POS's receipt number for the original transaction
-deviceId | Unicode string | Unique device identifier for the POS terminal
-operatorId | Unicode string | ID of POS/terminal operator
-firmwareVersion | Unicode string | current firmware version of POS device
+x_pos_transaction_ref | Unicode string | This is the transaction reference that was passed through as part of the *ProcessAuthorisation* request (or the *SendReceipt* request), which is stored by Oxipay so that it can reconcile sales adjustment requests.
+x_merchant_id | Unicode string | Merchant identifier as defined by Oxipay
+x_amount | decimal | Requested adjustment amount
+x_device_id | Unicode string | Unique device identifier for the POS terminal
+x_operator_id | Unicode string | ID of POS/terminal operator
+x_firmware_version | Unicode string | current firmware version of POS device
+tracking_data <code class="optional">optional</code> | Associative array | A map that can be populated with additional tracking/state information that will get passed back in the response
 signature | Hex string case-insensitive | Payload that is signed using HMAC-SHA256 using a device specific key
-echo <code class="optional">optional</code> | true/false | Determines if Oxipay need to echo back the payload (false by default)
-additionalData <code class="optional">optional</code> | Key-Value pair | A map that can be populated with additional information
 
 <h3>Response</h3>
 
 Parameter | Type | Description
 -----------|------|-------------
-status | Unicode string | Success/Failure/Error
-code | Unicode string | A code that maps to a <a href="/api_information/status_codes/">specific reason</a>
-message | Unicode string | A string explaining the status/code above. Example: For an Error: Reason why the adjustment cannot be done
-requestData | Key-Value pair | If echo was set to <code>true</code> on the request, will contain a flattened key-value pair array of all data sent over the wire
+x_status | Unicode string | Success/Failure/Error
+x_code | Unicode string | A code that maps to a <a href="/api_information/status_codes/">specific reason</a>
+x_message | Unicode string | A string explaining the status/code above. Example: For an Error: Reason why the adjustment cannot be done
+tracking_data | Associative array | Echoes tracking_data sent on the request
 signature | Hex string case-insensitive | Payload that is signed using HMAC-SHA256 using a device specific key
 
 <h3>Testing</h3>
 
 The following describes dummy API requests that return a predictable response. Please contact <a href="mailto:support@oxipay.com.au">support@oxipay.com.au</a> to get access to the test/dummy APIs.
 
-Request -> amount | Response -> status | Response -> code
+Request -> x_amount | Response -> x_status | Response -> x_code
 -----------|-----------|-----------
 ##.01 | Success | SPSA01
 ##.02 | Failed | FPSA01
