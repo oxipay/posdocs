@@ -38,6 +38,7 @@ Request -> x_amount | Response -> x_status | Response -> x_code
 ##.05 | Failed | FPSA04
 ##.06 | Failed | FPSA05
 ##.10 | Error | EVAL01
+##.11 | Error | EAUT01
 any other value | Error | EISE01
 
 <span style="color:grey;"><b>#</b> signifies a numeric digit</span>

@@ -42,6 +42,7 @@ Request -> x_pre_approval_code | Response -> x_status | Response -> x_code
 15###### | Failed | FPRA06
 16###### | Failed | FPRA07
 20###### | Error | EVAL01
+21###### | Error | EAUT01
 any other value | Error | EISE01
 
 <span style="color:grey;"><b>#</b> signifies an alphanumeric digit</span>

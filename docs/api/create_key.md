@@ -34,6 +34,7 @@ Request -> x_client_device_id | Response -> x_status | Response -> x_code
 -----------|-----------|-----------
 1 | Success | SCRK01
 2 | Error | EVAL01
+3 | Error | EAUT01
 any other value | Error | EISE01
 
 **Testing Assumptions**
