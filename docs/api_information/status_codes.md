@@ -28,5 +28,6 @@ Failed | FPSA03 | ProcessSalesAdjustment | This Oxipay contract has previously b
 Failed | FPSA04 | ProcessSalesAdjustment | Sales adjustment cannot be processed for this amount
 Failed | FPSA05 | ProcessSalesAdjustment | Unable to process a sales adjustment for this contract. Please contact Merchant Services on 1300 413 902 during business hours for further information
 Error | EVAL01 | * | Validation error
+Error | EAUT01 | * | Authentication error
 Error | ESIG01 | * | Signature mismatch error
 Error | EISE01 | * | Internal server error

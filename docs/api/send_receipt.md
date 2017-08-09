@@ -1,4 +1,4 @@
-Requests to this API should only be made when a temporary value is used as the *x_pos_transaction_ref* in calls to *ProcessAuthorisation*. Oxipay will store the specified *x_pos_transaction_ref*, which it will use for transaction reconciliation in any future requests to *ProcessSalesAdjustment*.
+Requests to this API should only be made when a temporary value is used as the *x_pos_transaction_ref* in calls to *ProcessAuthorisation*. Oxipay will store the specified *x_receipt_number*, which it will use for transaction reconciliation in any future requests to *ProcessSalesAdjustment*.
 
 **Method:** *SendReceipt*
 
@@ -6,11 +6,12 @@ Requests to this API should only be made when a temporary value is used as the *
 
 Parameter &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;| Type | Description
 -----------|------|-------------
-x_pos_transaction_ref | Unicode string | This must be the same reference that would get passed through on future *ProcessSalesAdjustment* requests.
+x_pos_transaction_ref | Unicode string | This must be the same reference used in *ProcessAuthorisation* request.
 x_merchant_id | Unicode string | Merchant identifier as defined by Oxipay
 x_device_id | Unicode string | Unique device identifier for the POS terminal
 x_operator_id | Unicode string | ID of POS/terminal operator
 x_firmware_version | Unicode string | current firmware version of POS device
+x_receipt_number | Unicode string | This must be the same reference (x_pos_transaction_ref) that would get passed through on future ProcessSalesAdjustment requests
 tracking_data <code class="optional">optional</code> | Associative array | A map that can be populated with additional tracking/state information that will get passed back in the response
 signature | Hex string case-insensitive | Payload that is signed using HMAC-SHA256 using a device specific key
 
@@ -32,6 +33,7 @@ Request -> x_receipt_number | Response -> x_status | Response -> x_code
 -----------|-----------|-----------
 1 | Success | SSER01
 2 | Error | EVAL01
+3 | Error | EAUT01
 any other value | Error | EISE01
 
 **Testing Assumptions**
