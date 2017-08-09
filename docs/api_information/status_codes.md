@@ -27,6 +27,9 @@ Failed | FPSA02 | ProcessSalesAdjustment | This contract has already been comple
 Failed | FPSA03 | ProcessSalesAdjustment | This Oxipay contract has previously been cancelled and all payments collected have been refunded to the customer
 Failed | FPSA04 | ProcessSalesAdjustment | Sales adjustment cannot be processed for this amount
 Failed | FPSA05 | ProcessSalesAdjustment | Unable to process a sales adjustment for this contract. Please contact Merchant Services on 1300 413 902 during business hours for further information
+Failed | FSER01 | SendReceipt | Unable to find the specified POS transaction reference
+Failed | FSER02 | SendReceipt | The specified POS transaction reference is already in use
+Failed | FCRK01 | CreateKey | Unable to find the specified client device id
 Error | EVAL01 | * | Validation error
 Error | EAUT01 | * | Authentication error
 Error | ESIG01 | * | Signature mismatch error
