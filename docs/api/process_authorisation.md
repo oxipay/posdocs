@@ -33,7 +33,7 @@ The following describes dummy API requests that return a predictable response. P
 
 Request -> x_pre_approval_code | Response -> x_status | Response -> x_code
 -----------|-----------|-----------
-00###### | Success | SPRA01
+01###### | Success | SPRA01
 10###### | Failed | FPRA01
 11###### | Failed | FPRA02
 12###### | Failed | FPRA03
@@ -41,8 +41,8 @@ Request -> x_pre_approval_code | Response -> x_status | Response -> x_code
 14###### | Failed | FPRA05
 15###### | Failed | FPRA06
 16###### | Failed | FPRA07
-20###### | Error | EVAL01
-21###### | Error | EAUT01
+30###### | Error | EVAL01
+31###### | Error | EAUT01
 any other value | Error | EISE01
 
 <span style="color:grey;"><b>#</b> signifies an alphanumeric digit</span>

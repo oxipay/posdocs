@@ -32,13 +32,13 @@ The following describes dummy API requests that return a predictable response. P
 Request -> x_amount | Response -> x_status | Response -> x_code
 -----------|-----------|-----------
 ##.01 | Success | SPSA01
-##.02 | Failed | FPSA01
-##.03 | Failed | FPSA02
-##.04 | Failed | FPSA03
-##.05 | Failed | FPSA04
-##.06 | Failed | FPSA05
-##.10 | Error | EVAL01
-##.11 | Error | EAUT01
+##.10 | Failed | FPSA01
+##.11 | Failed | FPSA02
+##.12 | Failed | FPSA03
+##.13 | Failed | FPSA04
+##.14 | Failed | FPSA05
+##.30 | Error | EVAL01
+##.31 | Error | EAUT01
 any other value | Error | EISE01
 
 <span style="color:grey;"><b>#</b> signifies a numeric digit</span>

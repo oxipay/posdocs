@@ -32,8 +32,8 @@ The following describes dummy API requests that return a predictable response. P
 Request -> x_purchase_amount | Response -> x_status | Response -> x_code
 -----------|-----------|-----------
 ##.01 | Success | SINV01
-##.02 | Error | EVAL01
-##.03 | Error | EAUT01
+##.30 | Error | EVAL01
+##.31 | Error | EAUT01
 any other value | Error | EISE01
 
 <span style="color:grey;"><b>#</b> signifies a numeric digit</span>
