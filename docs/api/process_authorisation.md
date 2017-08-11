@@ -8,8 +8,8 @@ Parameter &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&n
 -----------|------|-------------
 x_pos_transaction_ref | Unicode string | This must be the same reference that would get passed through on future *ProcessSalesAdjustment* requests. This field is mandatory - if the POS system does not have this information at the time of the request, it should pass through a temporary unique value (e.g. a GUID) so that Oxipay has the information it needs to process retry attempts. If a temporary value *is* used; a subsequent request to *SendReceipt* **must** be made when the actual transaction reference is known by the POS system, so that Oxipay can successfully reconcile future *ProcessSalesAdjustment* requests.
 x_merchant_id | Unicode string | Merchant identifier as defined by Oxipay
-x_purchase_amount | decimal | Total purchase amount
-x_finance_amount | decimal | Amount that the customer wants the finance for from Oxipay
+x_purchase_amount | int | Total purchase amount (in cents)
+x_finance_amount | int | Amount that the customer wants the finance for from Oxipay (in cents)
 x_pre_approval_code | Unicode string | The pre-approval code obtained from barcode that the customer is presented
 x_device_id | Unicode string | Unique device identifier for the POS terminal
 x_operator_id | Unicode string | ID of POS/terminal operator

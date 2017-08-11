@@ -8,7 +8,7 @@ Parameter &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&n
 -----------|------|-------------
 x_pos_transaction_ref | Unicode string | This is the transaction reference that was passed through as part of the *ProcessAuthorisation* request (or the *SendReceipt* request), which is stored by Oxipay so that it can reconcile sales adjustment requests.
 x_merchant_id | Unicode string | Merchant identifier as defined by Oxipay
-x_amount | decimal | Requested adjustment amount
+x_amount | int | Requested adjustment amount (in cents)
 x_device_id | Unicode string | Unique device identifier for the POS terminal
 x_operator_id | Unicode string | ID of POS/terminal operator
 x_firmware_version | Unicode string | current firmware version of POS device
@@ -31,14 +31,14 @@ The following describes dummy API requests that return a predictable response. P
 
 Request -> x_amount | Response -> x_status | Response -> x_code
 -----------|-----------|-----------
-##.01 | Success | SPSA01
-##.10 | Failed | FPSA01
-##.11 | Failed | FPSA02
-##.12 | Failed | FPSA03
-##.13 | Failed | FPSA04
-##.14 | Failed | FPSA05
-##.30 | Error | EVAL01
-##.31 | Error | EAUT01
+##01 | Success | SPSA01
+##10 | Failed | FPSA01
+##11 | Failed | FPSA02
+##12 | Failed | FPSA03
+##13 | Failed | FPSA04
+##14 | Failed | FPSA05
+##30 | Error | EVAL01
+##31 | Error | EAUT01
 any other value | Error | EISE01
 
 <span style="color:grey;"><b>#</b> signifies a numeric digit</span>
