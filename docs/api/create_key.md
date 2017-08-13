@@ -37,6 +37,8 @@ Request -> x_client_device_id | Response -> x_status | Response -> x_code
 31###### | Error | EAUT01
 any other value | Error | EISE01
 
+<span style="color:grey;"><b>#</b> signifies an alphanumeric digit</span>
+
 **Testing Assumptions**
 
 * To generate the signature, use a device-signing-key of "1234567890". A invalid signature will cause an ESIG01 Error.
