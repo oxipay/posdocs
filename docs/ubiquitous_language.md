@@ -12,3 +12,4 @@ Pre-authorisation | The process of determining if someone is eligible to use Oxi
 Authorisation | The process of determining if someone can get finance approval with Oxipay for the purchase amount
 Sales Adjustment | Full or partial refund of the Oxipay purchase
 GUDID | Globablly unique device ID
+128B | Code 128 code set B barcode symbology
