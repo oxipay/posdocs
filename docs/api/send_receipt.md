@@ -31,10 +31,14 @@ The following describes dummy API requests that return a predictable response. P
 
 Request -> x_receipt_number | Response -> x_status | Response -> x_code
 -----------|-----------|-----------
-1 | Success | SSER01
-2 | Error | EVAL01
-3 | Error | EAUT01
+01###### | Success | SSER01
+10###### | Failed | FSER01
+11###### | Failed | FSER02
+30###### | Error | EVAL01
+31###### | Error | EAUT01
 any other value | Error | EISE01
+
+<span style="color:grey;"><b>#</b> signifies an alphanumeric digit</span>
 
 **Testing Assumptions**
 

@@ -8,7 +8,7 @@ Parameter &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&n
 -----------|------|-------------
 x_merchant_id | Unicode string | Merchant identifier as defined by Oxipay
 x_mobile | Unicode string | Customer’s mobile number
-x_purchase_amount | decimal | Total purchase amount
+x_purchase_amount | int | Total purchase amount (in cents)
 x_device_id | Unicode string | Unique device identifier for the POS terminal
 x_operator_id | Unicode string | ID of POS/terminal operator
 x_firmware_version | Unicode string | current firmware version of POS device
@@ -31,9 +31,9 @@ The following describes dummy API requests that return a predictable response. P
 
 Request -> x_purchase_amount | Response -> x_status | Response -> x_code
 -----------|-----------|-----------
-##.01 | Success | SINV01
-##.02 | Error | EVAL01
-##.03 | Error | EAUT01
+##01 | Success | SINV01
+##30 | Error | EVAL01
+##31 | Error | EAUT01
 any other value | Error | EISE01
 
 <span style="color:grey;"><b>#</b> signifies a numeric digit</span>
