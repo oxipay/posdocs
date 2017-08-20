@@ -22,7 +22,7 @@ Failed | FPRA04 | ProcessAuthorisation | Declined because the customer limit has
 Failed | FPRA05 | ProcessAuthorisation | Declined due to negative payment history for the customer
 Failed | FPRA06 | ProcessAuthorisation | Declined because the credit-card used for the deposit is expired
 Failed | FPRA07 | ProcessAuthorisation | Declined because supplied posTransactionRef has already been processed
-Failed | FPRA08 | ProcessAuthorisation | Risk Declined - The instalment amount was below the minimum threshold
+Failed | FPRA08 | ProcessAuthorisation | Declined because the instalment amount was below the minimum threshold
 Failed | FPRA21 | ProcessAuthorisation | The Barcode was not found
 Failed | FPRA22 | ProcessAuthorisation | The Barcode has already been used
 Failed | FPRA23 | ProcessAuthorisation | The Barcode has expired
