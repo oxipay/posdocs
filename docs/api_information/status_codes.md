@@ -23,11 +23,12 @@ Failed | FPRA05 | ProcessAuthorisation | Declined due to negative payment histor
 Failed | FPRA06 | ProcessAuthorisation | Declined because the credit-card used for the deposit is expired
 Failed | FPRA07 | ProcessAuthorisation | Declined because supplied posTransactionRef has already been processed
 Failed | FPRA08 | ProcessAuthorisation | Declined because the instalment amount was below the minimum threshold
+Failed | FPRA09 | ProcessAuthorisation | Declined because purchase amount exceeded pre-approved amount
 Failed | FPRA21 | ProcessAuthorisation | The Barcode was not found
 Failed | FPRA22 | ProcessAuthorisation | The Barcode has already been used
 Failed | FPRA23 | ProcessAuthorisation | The Barcode has expired
 Failed | FPRA24 | ProcessAuthorisation | The Barcode has been cancelled
-Failed | FPRA99 | ProcessAuthorisation | Other Declined
+Failed | FPRA99 | ProcessAuthorisation | Declined
 Failed | FPSA01 | ProcessSalesAdjustment | Unable to find the specified POS transaction reference
 Failed | FPSA02 | ProcessSalesAdjustment | This contract has already been completed
 Failed | FPSA03 | ProcessSalesAdjustment | This Oxipay contract has previously been cancelled and all payments collected have been refunded to the customer
