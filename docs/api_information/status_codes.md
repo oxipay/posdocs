@@ -27,7 +27,7 @@ Failed | FPRA21 | ProcessAuthorisation | The Barcode was not found
 Failed | FPRA22 | ProcessAuthorisation | The Barcode has already been used
 Failed | FPRA23 | ProcessAuthorisation | The Barcode has expired
 Failed | FPRA24 | ProcessAuthorisation | The Barcode has been cancelled
-Failed | FPRA99 | ProcessAuthorisation | Other Declined
+Failed | FPRA99 | ProcessAuthorisation | Declined
 Failed | FPSA01 | ProcessSalesAdjustment | Unable to find the specified POS transaction reference
 Failed | FPSA02 | ProcessSalesAdjustment | This contract has already been completed
 Failed | FPSA03 | ProcessSalesAdjustment | This Oxipay contract has previously been cancelled and all payments collected have been refunded to the customer

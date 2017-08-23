@@ -41,6 +41,12 @@ Request -> x_pre_approval_code | Response -> x_status | Response -> x_code
 14###### | Failed | FPRA05
 15###### | Failed | FPRA06
 16###### | Failed | FPRA07
+17###### | Failed | FPRA08
+18###### | Failed | FPRA21
+19###### | Failed | FPRA22
+20###### | Failed | FPRA23
+21###### | Failed | FPRA24
+22###### | Failed | FPRA99
 30###### | Error | EVAL01
 31###### | Error | EAUT01
 any other value | Error | EISE01
