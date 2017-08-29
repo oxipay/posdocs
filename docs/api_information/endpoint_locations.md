@@ -2,7 +2,7 @@
 
 Environment<br/>Classification | Communication<br/>Protocol | Version | URL
 ----------|----------|----------|----------
-Dummy | SOAP | v1 | <a href="https://pos.oxipay.com.au/soap/TestService.svc?wsdl">https://pos.oxipay.com.au/soap/TestService.svc?wsdl</a>
+Dummy | SOAP | v1 | <a href="https://pos.oxipay.com.au/soap/v1/TestService.svc?wsdl">https://pos.oxipay.com.au/soap/v1/TestService.svc?wsdl</a>
 Dummy | HTTP | v1 | TBA
 TEST | SOAP | v1 | TBA
 TEST | HTTP | v1 | TBA
