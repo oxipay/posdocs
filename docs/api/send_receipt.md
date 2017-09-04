@@ -13,7 +13,6 @@ x_operator_id | Unicode string | ID of POS/terminal operator
 x_firmware_version | Unicode string | current firmware version of POS device
 x_receipt_number | Unicode string | This must be the same reference (x_pos_transaction_ref) that would get passed through on future ProcessSalesAdjustment requests
 tracking_data <code class="optional">optional</code> | Associative array | A map that can be populated with additional tracking/state information that will get passed back in the response
-purchase_items | String array | A string array with the description of items purchased
 signature | Hex string case-insensitive | Payload that is signed using HMAC-SHA256 using a device specific key
 
 <h3>Response</h3>

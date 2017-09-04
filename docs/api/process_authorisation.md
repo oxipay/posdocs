@@ -15,6 +15,7 @@ x_device_id | Unicode string | Unique device identifier for the POS terminal
 x_operator_id | Unicode string | ID of POS/terminal operator
 x_firmware_version | Unicode string | current firmware version of POS device
 tracking_data <code class="optional">optional</code> | Associative array | A map that can be populated with additional tracking/state information that will get passed back in the response
+purchase_items | String array | A string array with the description of items purchased
 signature | Hex string case-insensitive | Payload that is signed using HMAC-SHA256 using a device specific key
 
 <h3>Response</h3>
@@ -23,9 +24,9 @@ Parameter | Type | Description
 -----------|------|-------------
 x_status | Unicode string | Success/Failure/Error
 x_code | Unicode string | A code that maps to a <a href="/api_information/status_codes/">specific reason</a>
-x_message | Unicode string | A string explaining the status/code above. Example: For an Approval, what will be customer’s first direct debit date. For an Error: Bank declined – Insufficient Funds 
+x_message | Unicode string | A string explaining the status/code above. Example: For an Approval, what will be customer’s first direct debit date. For an Error: Bank declined – Insufficient Funds
 tracking_data | Associative array | Echoes tracking_data sent on the request
-signature | Hex string case-insensitive | Payload that is signed using HMAC-SHA256 using a device specific key 
+signature | Hex string case-insensitive | Payload that is signed using HMAC-SHA256 using a device specific key
 
 <h3>Testing</h3>
 
