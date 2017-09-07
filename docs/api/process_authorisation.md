@@ -11,7 +11,7 @@ x_merchant_id | Unicode string | Merchant identifier as defined by Oxipay
 x_purchase_amount | int | Total purchase amount (in cents)
 x_finance_amount | int | Amount that the customer wants the finance for from Oxipay (in cents)
 x_pre_approval_code | Unicode string | The pre-approval code obtained from barcode that the customer is presented
-purchase_items <code class="optional">optional</code> | String array | A string array with the description of items purchased
+purchase_items <code class="optional">optional</code> | String | A JSON formatted string containing information about the purchase items e.g. <code>{ "PurchaseItems": [ "Item1", "Item2" ] }</code><br/>**Note**: the purchase item array is assigned to a field named "PurchaseItems".
 x_device_id | Unicode string | Unique device identifier for the POS terminal
 x_operator_id | Unicode string | ID of POS/terminal operator
 x_firmware_version | Unicode string | current firmware version of POS device
