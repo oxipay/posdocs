@@ -15,7 +15,8 @@ pages:
 - Additional API Information: 
     - Status Codes: 'api_information/status_codes.md'
     - API Versioning: 'api_information/api_versioning.md'
-    - Enpoint Locations: 'api_information/endpoint_locations.md'
+    - Endpoint Locations: 'api_information/endpoint_locations.md'
+    - HTTP Examples: 'api_information/http_examples.md'
     - Retries & Idempotency: 'api_information/retries_and_idempotency.md'
 - Supported Standards/Protocols: 
     - Barcode Standards: 'protocols/barcode_standards.md'

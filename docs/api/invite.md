@@ -1,4 +1,4 @@
-This endpoint will be used to initiate a request that will send an invite to the customer to Login or Register with Oxipay so that they can get a pre-approval code.
+This endpoint is used to initiate a request that will send an invite to the customer to Login or Register with Oxipay so that they can get a pre-approval code.
 
 **Method:** *Invite*
 
