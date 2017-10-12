@@ -6,10 +6,10 @@ This endpoint is used to process a Sales Adjustment at the point-of-sale. See <a
 
 Parameter &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;| Type | Description
 -----------|------|-------------
-x_pos_transaction_ref | Unicode string | This is the transaction reference that was passed through as part of the *ProcessAuthorisation* request (or the *SendReceipt* request), which is stored by Oxipay so that it can reconcile sales adjustment requests.
+x_pos_transaction_ref | Unicode string | This is the transaction reference of the sales adjustment
+x_purchase_ref | Unicode string | The original transaction reference.<br/>It can either be the x_pos_transaction_ref that was passed through as part of the *ProcessAuthorisation* request (or the *SendReceipt* request), or the Oxipay purchase number that was returned from the call to *ProcessAuthorisation*. In the case of the former, the x_pos_transaction_ref *must* be unique among all sellers in a chain of sellers. In the case of the latter, the POS software would be required to store the x_purchase_numer retured by *ProcessAuthorisation*.
 x_merchant_id | Unicode string | Merchant identifier as defined by Oxipay
 x_amount | int | Requested adjustment amount (in cents)
-x_retry | bool | Flag indicating whether or not this sales adjustment request is a retry for a previous sales adjustment (for the same x_pos_transaction_ref). This is useful if a network failure or other error occurred, whereby the response from the previous sales adjustment request was not received. If the previous sales adjustment was processed then the result from the previous request will be returned. If the previous sales adjustment was not processed, then a new adjustment will be processed and the result returned. There is no limit on the number of retry attempts, but note that a retry is always on the most recent sales adjustment request for the same x_pos_transaction_ref (e.g. if 2 sales adjustments have already been processed, then a 3rd sales adjustment request with the x_retry set true will return the result of the 2nd adjustment)
 x_device_id | Unicode string | Unique device identifier for the POS terminal
 x_operator_id | Unicode string | ID of POS/terminal operator
 x_firmware_version | Unicode string | current firmware version of POS device
