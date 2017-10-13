@@ -137,13 +137,13 @@ Used to process a Sales Adjustment as the point-of-sale. See <a href="/api/proce
 *Sample JSON request:*
 ```
 {
+   "x_pos_transaction_ref": "tnx-ref1",
+   "x_purchase_ref": "123456789",
    "x_merchant_id": "30299999",
+   "x_amount": 1000,
    "x_device_id": "d555",
    "x_operator_id": "test_operator",
    "x_firmware_version": "123",
-   "x_pos_transaction_ref": "tnx-ref1",
-   "x_amount": 1000,
-   "x_retry": false,
    "signature": "ce20e2f1a9fe0d92b3d021ba7f1b372b006778cfab5fc4c09efa60a6d910c471"
 }
 ```
