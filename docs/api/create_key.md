@@ -1,4 +1,4 @@
-This endpoint will be used to obtain a device-signing-key using the shared private key. The device-signing-key will then be used to digitally sign all the subsequent messages. See <a href="/security/device_initialisation/">device initialisation</a> for more information.
+This endpoint is used to obtain a device-signing-key using the shared private key. The device-signing-key can then be used to digitally sign all the subsequent messages. See <a href="/security/device_initialisation/">device initialisation</a> for more information.
 
 **Method:** *CreateKey*
 

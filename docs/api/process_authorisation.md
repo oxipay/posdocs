@@ -1,4 +1,4 @@
-This endpoint will process an authorisation to finalise the transaction
+This endpoint processes an authorisation to finalise the transaction.
 
 **Method:** *ProcessAuthorisation*
 

@@ -65,6 +65,22 @@
 	color: #FFF
 }
 
+.get-icon {
+	background-color: #002964;
+	color: #FFF;
+	vertical-align: top;
+}
+
+.post-icon {
+	background-color: #0ebd01;
+	color: #FFF;
+	vertical-align: top;
+}
+
+.mr {
+	margin-right: 7px;
+}
+
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
      /* IE10+ CSS styles go here */
      #oxipay-img{
