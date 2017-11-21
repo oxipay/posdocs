@@ -12,6 +12,7 @@ pages:
     - Process Authorisation: 'api/process_authorisation.md'
     - Send Receipt: 'api/send_receipt.md'
     - Process Sales Adjustment: 'api/process_sales_adjustment.md'
+    - Process Adjustment Reversal: 'api/process_adjustment_reversal.md'
 - Additional API Information: 
     - Status Codes: 'api_information/status_codes.md'
     - API Versioning: 'api_information/api_versioning.md'
