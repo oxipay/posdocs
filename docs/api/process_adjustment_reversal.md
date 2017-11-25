@@ -7,7 +7,7 @@ This endpoint is used to process a reversal of a Sales Adjustment at the point-o
 Parameter &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;| Type | Description
 -----------|------|-------------
 x_pos_transaction_ref | Unicode string | This is the transaction reference of the adjustment reversal
-x_adjustment_signature | Unicode string | The original adjustment signature that we are trying to reverse.
+x_adjustment_signature | Unicode string | The original adjustment signature that we are trying to reverse. We are using the Sales Adjustment Signature as we can not rely on the Sales Adjustment to return a result. (e.g. Network Issues)
 x_merchant_id | Unicode string | Merchant identifier as defined by Oxipay
 x_device_id | Unicode string | Unique device identifier for the POS terminal
 x_operator_id | Unicode string | ID of POS/terminal operator
@@ -29,7 +29,20 @@ signature | Hex string case-insensitive | Payload that is signed using HMAC-SHA2
 
 The following describes dummy API requests that return a predictable response. Please contact <a href="mailto:support@oxipay.com.au">support@oxipay.com.au</a> to get access to the test/dummy APIs.
 
-TBA
+Request -> x_amount | Response -> x_status | Response -> x_code
+-----------|-----------|-----------
+##01 | Success | SPAR01
+##10 | Failed | FPAR01
+##11 | Failed | FPAR02
+##12 | Failed | FPAR03
+##13 | Failed | FPAR05
+##14 | Failed | FPAR06
+##15 | Failed | FPAR07
+##16 | Failed | FPAR08
+##17 | Failed | FPAR09
+##30 | Error | EVAL01
+##31 | Error | EAUT01
+any other value | Error | EISE01
 
 <span style="color:grey;"><b>#</b> signifies a numeric digit</span>
 
