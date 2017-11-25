@@ -1,15 +1,14 @@
-This endpoint is used to process a Sales Adjustment at the point-of-sale. See <a href="/process/sales_adjustment/">sales adjustment process</a> for more information.
+This endpoint is used to process a reversal of a Sales Adjustment at the point-of-sale. 
 
-**Method:** *ProcessSalesAdjustment*
+**Method:** *ProcessSalesAdjustmentReversal*
 
 <h3>Request</h3>
 
 Parameter &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;| Type | Description
 -----------|------|-------------
-x_pos_transaction_ref | Unicode string | This is the transaction reference of the sales adjustment
-x_purchase_ref | Unicode string | The original transaction reference.<br/>It can either be the x_pos_transaction_ref that was passed through as part of the *ProcessAuthorisation* request (or the *SendReceipt* request), or the Oxipay purchase number that was returned from the call to *ProcessAuthorisation*. In the case of the former, the x_pos_transaction_ref *must* be unique among all sellers in a chain of sellers. In the case of the latter, the POS software would be required to store the x_purchase_numer retured by *ProcessAuthorisation*.
+x_pos_transaction_ref | Unicode string | This is the transaction reference of the adjustment reversal
+x_adjustment_signature | Unicode string | The original adjustment signature that we are trying to reverse. We are using the Sales Adjustment Signature as we can not rely on the Sales Adjustment to return a result. (e.g. Network Issues)
 x_merchant_id | Unicode string | Merchant identifier as defined by Oxipay
-x_amount | int | Requested adjustment amount (in cents)
 x_device_id | Unicode string | Unique device identifier for the POS terminal
 x_operator_id | Unicode string | ID of POS/terminal operator
 x_firmware_version | Unicode string | current firmware version of POS device
@@ -32,15 +31,15 @@ The following describes dummy API requests that return a predictable response. P
 
 Request -> x_amount | Response -> x_status | Response -> x_code
 -----------|-----------|-----------
-##01 | Success | SPSA01
-##10 | Failed | FPSA01
-##11 | Failed | FPSA02
-##12 | Failed | FPSA03
-##13 | Failed | FPSA04
-##14 | Failed | FPSA05
-##15 | Failed | FPSA06
-##16 | Failed | FPSA07
-##17 | Failed | FPSA08
+##01 | Success | SPAR01
+##10 | Failed | FPAR01
+##11 | Failed | FPAR02
+##12 | Failed | FPAR03
+##13 | Failed | FPAR05
+##14 | Failed | FPAR06
+##15 | Failed | FPAR07
+##16 | Failed | FPAR08
+##17 | Failed | FPAR09
 ##30 | Error | EVAL01
 ##31 | Error | EAUT01
 any other value | Error | EISE01

@@ -153,8 +153,40 @@ Used to process a Sales Adjustment as the point-of-sale. See <a href="/api/proce
 {
    "x_status": "Failed",
    "x_code": "FPSA05",
-   "x_message": "Unable to process a sales adjustment for this contract. Please contact Merchant Services on 1300 413 902 during business hours for further information",
+   "x_message": "Unable to process a sales adjustment for this contract. Please contact Merchant Services on [CollectionsPhone] during business hours for further information",
    "signature": "b490b0565a93b31bdf93037ede44b3619f08a1e0e5f68332db52f02176a86bb2",
+   "tracking_data": null
+}
+```
+
+
+ProcessSalesAdjustmentReversal
+===================================================================================================
+
+<code class="post-icon mr">POST</code>**/webapi/v1/ProcessSalesAdjustmentReversal**
+
+Used to process a Sales Adjustment as the point-of-sale. See <a href="/api/process_adjustment_reversal/">Process Sales Adjustment Reversal</a> for more information.
+
+*Sample JSON request:*
+```
+{
+   "x_pos_transaction_ref": "tnx-rev1",
+   "x_adjustment_signature": "ce20e2f1a9fe0d92b3d021ba7f1b372b006778cfab5fc4c09efa60a6d910c471",
+   "x_merchant_id": "30299999",
+   "x_device_id": "d555",
+   "x_operator_id": "test_operator",
+   "x_firmware_version": "123",
+   "signature": "1949a14cfdd8e6062a54f28ab3a607637f081afb7b8f4cffa3fb413fadab963b"
+}
+```
+
+*Sample JSON reponse:*
+```
+{
+   "x_status": "Failed",
+   "x_code": "FPSA05",
+   "x_message": "Unable to process a sales adjustment reversal for this contract. Please contact Merchant Services on [CollectionsPhone] during business hours for further information",
+   "signature": "1949a14cfdd8e6062a54f28ab3a607637f081afb7b8f4cffa3fb413fadab963b",
    "tracking_data": null
 }
 ```

@@ -14,6 +14,7 @@ Success | SCRK01 | CreateKey | Success
 Success | SINV01 | Invite | Success
 Success | SPRA01 | ProcessAuthorisation | Approved
 Success | SPSA01 | ProcessSalesAdjustment | Approved
+Success | SPAR01 | ProcessSalesAdjustmentReversal | Approved
 Success | SSER01 | SendReceipt | Success
 Failed | FPRA01 | ProcessAuthorisation | Declined due to internal risk assessment against the customer
 Failed | FPRA02 | ProcessAuthorisation | Declined due to insufficient funds for the deposit
@@ -33,8 +34,17 @@ Failed | FPSA01 | ProcessSalesAdjustment | Unable to find the specified POS tran
 Failed | FPSA02 | ProcessSalesAdjustment | This contract has already been completed
 Failed | FPSA03 | ProcessSalesAdjustment | This Oxipay contract has previously been cancelled and all payments collected have been refunded to the customer
 Failed | FPSA04 | ProcessSalesAdjustment | Sales adjustment cannot be processed for this amount
-Failed | FPSA05 | ProcessSalesAdjustment | Unable to process a sales adjustment for this contract. Please contact Merchant Services on 1300 413 902 during business hours for further information
-Failed | FPSA06 | ProcessSalesAdjustment | Sales adjustment cannot be processed. Please call Oxipay Collections on 1300 413 910
+Failed | FPSA05 | ProcessSalesAdjustment | Unable to process a sales adjustment for this contract. Please contact Merchant Services on [CollectionsPhone] during business hours for further information
+Failed | FPSA06 | ProcessSalesAdjustment | Sales adjustment cannot be processed. Please call Oxipay Collections on [CollectionsPhone]
+Failed | FPSA07 | ProcessSalesAdjustment | Sales adjustment cannot be processed at this store
+Failed | FPSA08 | ProcessSalesAdjustment | Sales adjustment cannot be processed for this transaction. Duplicate receipt number found.
+Failed | FPAR01 | ProcessSalesAdjustmentReversal | Unable to find the specified POS signature
+Failed | FPAR02 | ProcessSalesAdjustmentReversal | This contract has already been completed
+Failed | FPAR03 | ProcessSalesAdjustmentReversal | This Oxipay contract has previously been cancelled and all payments collected have been refunded to the customer
+Failed | FPAR05 | ProcessSalesAdjustmentReversal | Unable to process a sales adjustment for this contract. Please contact Merchant Services on [CollectionsPhone] during business hours for further information
+Failed | FPAR06 | ProcessSalesAdjustmentReversal | Sales adjustment adjustment cannot be processed. Please call Oxipay Collections on [CollectionsPhone]
+Failed | FPAR07 | ProcessSalesAdjustmentReversal | Sales adjustment adjustment cannot be processed at this store
+Failed | FPAR08 | ProcessSalesAdjustmentReversal | Sales adjustment adjustment cannot be processed for this transaction. Duplicate signature found.
 Failed | FSER01 | SendReceipt | Unable to find the specified POS transaction reference
 Failed | FSER02 | SendReceipt | The specified POS transaction reference is already in use
 Failed | FCRK01 | CreateKey | Device token provided could not be found
