@@ -2,6 +2,7 @@ site_name: Oxipay POS Integration
 pages:
 - Home: 'index.md'
 - Ubiquitous Language: 'ubiquitous_language.md'
+- Getting Started: 'getting-started.md'
 - Processes:
     - Customer Initiated Flow: 'process/customer_initiated_flow.md'
     - Merchant Initiated Flow: 'process/merchant_initiated_flow.md'
