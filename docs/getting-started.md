@@ -1,36 +1,26 @@
-Your POS integration for Oxipay will need to support 2 experiences.
+Your POS integration for Oxipay will need to support the following customer experience.
 
-* [Merchant Initiated Flow](process/merchant_initiated_flow.md)
-* [Customer initiated flow](process/customer_initiated_flow.md)
-
-In order to implement these flows you will need to do the following and we suggest starting with the Merchant Initiated Flow: 
-
-
-## Setup 
-1. Login to the Merchant Area using your Merchant Id and Password: 
-   https://uatportals.oxipay.com.au/#/login 
-   (Click on the Merchant Login link)
-2. *Initialise the POS device*
-   You will need to generate a POS Device Token from the Merchant Area.
-
-## Merchant initiated flow
+# Checkout Flow
+1. Generate a barcode
+2. POS will scan the barcode
+3. POS calls Oxipay and receives a response
+4. Confirm with customer
 
 
-1. Capture the customers Mobile Phone number.
-2. POS device initiates invitation request
-3. Customer will receive an SMS
-4. Customer logs in or registers for an Oxipay account.
-5. Customer will get a pre-approval code (presented as a barcode) for a pre-approved amount
-6. The process from here is now the same as the customer initiated flow. 
+In order to implement this you will need to: 
 
+# Initialise the POS terminal / device
 
-## Customer initiated flow 
+1. Login to the [Seller Portal](https://uatportals.oxipay.com.au/merchantarea#/login) using your Merchant Id and Password: 
+2. You will need to generate a POS Device Token from the Menu.
+3. *Initialise the POS device*
+   
 
-1. Create an Oxipay customer account (https://uatportals.oxipay.com.au/#/login)
-2. Generate a barcode
-3. POS will scan the barcode
-4. POS Calls Oxipay and receives a response
-5. Confirm with customer
+## Setup a Customer
+
+1. Create an Oxipay customer account in the [Customer Portal](https://uatportals.oxipay.com.au/customerarea#/login)
+2. Click "Shop Instore" to generate a barcode
+
 
 
 
