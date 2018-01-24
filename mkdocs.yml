@@ -5,7 +5,6 @@ pages:
 - Getting Started: 'getting-started.md'
 - Processes:
     - Customer Initiated Flow: 'process/customer_initiated_flow.md'
-    - Merchant Initiated Flow: 'process/merchant_initiated_flow.md'
     - Sales Adjustment: 'process/sales_adjustment.md'
 - API Reference: 
     - Create Key: 'api/create_key.md'
