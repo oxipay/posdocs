@@ -1,21 +1,26 @@
 Your POS integration for Oxipay will need to support the following customer experience.
-In order to implement this you will need to do the following
+
+# Checkout Flow
+1. Generate a barcode
+2. POS will scan the barcode
+3. POS calls Oxipay and receives a response
+4. Confirm with customer
 
 
-## Setup Merchant
-1. Login to the Merchant Area using your Merchant Id and Password: 
-   https://uatportals.oxipay.com.au/#/login 
-   (Click on the Merchant Login link)
-2. *Initialise the POS device*
-   You will need to generate a POS Device Token from the Merchant Area.
+In order to implement this you will need to: 
 
-## Setup Merchant
+# Initialise the POS terminal / device
 
-1. Create an Oxipay customer account (https://uatportals.oxipay.com.au/#/login)
-2. Generate a barcode
-3. POS will scan the barcode
-4. POS Calls Oxipay and receives a response
-5. Confirm with customer
+1. Login to the [Seller Portal](https://uatportals.oxipay.com.au/merchantarea#/login) using your Merchant Id and Password: 
+2. You will need to generate a POS Device Token from the Menu.
+3. *Initialise the POS device*
+   
+
+## Setup a Customer
+
+1. Create an Oxipay customer account in the [Customer Portal](https://uatportals.oxipay.com.au/customerarea#/login)
+2. Click "Shop Instore" to generate a barcode
+
 
 
 
