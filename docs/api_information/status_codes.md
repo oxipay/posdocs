@@ -38,6 +38,7 @@ Failed | FPSA05 | ProcessSalesAdjustment | Unable to process a sales adjustment 
 Failed | FPSA06 | ProcessSalesAdjustment | Sales adjustment cannot be processed. Please call Oxipay Collections on [CollectionsPhone]
 Failed | FPSA07 | ProcessSalesAdjustment | Sales adjustment cannot be processed at this store
 Failed | FPSA08 | ProcessSalesAdjustment | Sales adjustment cannot be processed for this transaction. Duplicate receipt number found.
+Failed | FPSA09 | ProcessSalesAdjustment | Amount must be greater than 0.
 Failed | FPAR01 | ProcessSalesAdjustmentReversal | Unable to find the specified POS signature
 Failed | FPAR02 | ProcessSalesAdjustmentReversal | This contract has already been completed
 Failed | FPAR03 | ProcessSalesAdjustmentReversal | This Oxipay contract has previously been cancelled and all payments collected have been refunded to the customer
