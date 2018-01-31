@@ -41,6 +41,7 @@ Request -> x_amount | Response -> x_status | Response -> x_code
 ##15 | Failed | FPSA06
 ##16 | Failed | FPSA07
 ##17 | Failed | FPSA08
+##18 | Failed | FPSA09
 ##30 | Error | EVAL01
 ##31 | Error | EAUT01
 any other value | Error | EISE01
