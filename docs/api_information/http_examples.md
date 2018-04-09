@@ -79,7 +79,7 @@ Initiates a request that will send an invite to the customer to Login or Registe
    "x_device_id": "d555",
    "x_operator_id": "test_operator",
    "x_firmware_version": "123",
-   "x_mobile": "0433316544",
+   "x_mobile": "0400000000",
    "x_purchase_amount": 10000,
    "signature": "9acbc32115e19c3135738bbef891c864ef734e2f66c3c3d3aeb5e0b1982db5f4"
 }
