@@ -4,16 +4,16 @@ Requests to this API should only be made when a temporary value is used as the *
 
 <h3>Request</h3>
 
-Parameter &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;| Type | Description
------------|------|-------------
-x_pos_transaction_ref | Unicode string | This must be the same reference used in *ProcessAuthorisation* request.
-x_merchant_id | Unicode string | Merchant identifier as defined by Oxipay
-x_device_id | Unicode string | Unique device identifier for the POS terminal
-x_operator_id | Unicode string | ID of POS/terminal operator
-x_firmware_version | Unicode string | current firmware version of POS device
-x_receipt_number | Unicode string | This must be the same reference (x_pos_transaction_ref) that would get passed through on future ProcessSalesAdjustment requests
-tracking_data <code class="optional">optional</code> | Associative array | A map that can be populated with additional tracking/state information that will get passed back in the response
-signature | Hex string case-insensitive | Payload that is signed using HMAC-SHA256 using a device specific key
+Parameter | Type | Length | Description
+----------|------|--------|------------
+x_pos_transaction_ref | Unicode string | 64 | This must be the same reference used in *ProcessAuthorisation* request.
+x_merchant_id | Unicode string | 10 | Merchant identifier as defined by Oxipay
+x_device_id | Unicode string | 64 | Unique device identifier for the POS terminal
+x_operator_id | Unicode string | 64 | ID of POS/terminal operator
+x_firmware_version | Unicode string | 64 | current firmware version of POS device
+x_receipt_number | Unicode string | 64 | This must be the same reference (x_pos_transaction_ref) that would get passed through on future ProcessSalesAdjustment requests
+tracking_data <code class="optional">optional</code> | Associative array | Max 1000000 | A map that can be populated with additional tracking/state information that will get passed back in the response
+signature | Hex string case-insensitive | 200 | Payload that is signed using HMAC-SHA256 using a device specific key
 
 <h3>Response</h3>
 
