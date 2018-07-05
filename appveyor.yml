@@ -15,9 +15,9 @@ artifacts:
 
 deploy:
   - provider: S3
-    access_key_id: AKIAIEAAUT5U2ZEVWVAQ
+    access_key_id: AKIAJIUIKUBZBXHSAR5Q
     secret_access_key:
-      secure: e68693697f3d5641d4cd1f32f398246480b2dc0593215422769e3b6d3ab2af0c
+      secure: 3pvBXjsWdGcaxmh5339WyN34ukiKJHyq+lfwxkyd+tfxu/0XgrQDsMfD5Uf44j+h
     bucket: posdocs2.oxipay.com.au
     region: ap-southeast-2
     unzip: true
