@@ -17,7 +17,7 @@ deploy:
   - provider: S3
     access_key_id: AKIAIEAAUT5U2ZEVWVAQ
     secret_access_key:
-      secure: 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
+      secure: e68693697f3d5641d4cd1f32f398246480b2dc0593215422769e3b6d3ab2af0c
     bucket: posdocs2.oxipay.com.au
     region: ap-southeast-2
     unzip: true
