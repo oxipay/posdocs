@@ -1,4 +1,5 @@
 site_name: Oxipay POS Integration
+site_dir: posdocsAU
 pages:
 - Home: 'index.md'
 - Ubiquitous Language: 'ubiquitous_language.md'
