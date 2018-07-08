@@ -2,7 +2,7 @@
 
 We implement URL based versioning, as this tends to be the easiest scheme for clients to consume (i.e. because the API is directly part of the URL and no special headers are needed).
 
-The API version is included into the URL as follows: <code>https://pos.oxipay.com.au/soap/<font style="background-color: yellow;">v1</font>/Service.svc?wsdl</code> (for SOAP) and <code>https://pos.oxipay.com.au/webapi/<font style="background-color: yellow;">v1</font>/operation</code> (for HTTP).<br/>
+The API version is included into the URL as follows: <code>https://pos.%domain%/soap/<font style="background-color: yellow;">v1</font>/Service.svc?wsdl</code> (for SOAP) and <code>https://pos.%domain%/webapi/<font style="background-color: yellow;">v1</font>/operation</code> (for HTTP).<br/>
 
 **Note**: There is no "fallback" behaviour if the version number is excluded from the URL (i.e. 404 "Not Found" response will be returned if no version is given as part of the URL). This decision was made to avoid confusion over which version of the API is being executed.
 

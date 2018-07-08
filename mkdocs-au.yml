@@ -31,3 +31,6 @@ pages:
 theme: readthedocs
 theme_dir: 'theme'
 extra_css: [css/jquery.modal.min.css, css/custom.css]
+extra:
+    domain: oxipay.com.au
+    email: support@oxipay.com.au

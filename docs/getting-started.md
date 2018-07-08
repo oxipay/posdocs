@@ -11,14 +11,14 @@ In order to implement this you will need to:
 
 # Initialise the POS terminal / device
 
-1. Login to the [Seller Portal](https://portalssandbox.oxipay.com.au/merchantarea#/login) using your Merchant Id and Password: 
+1. Login to the [Seller Portal](https://portalssandbox.%domain%/merchantarea#/login) using your Merchant Id and Password: 
 2. You will need to generate a POS Device Token from the Menu.
 3. *Initialise the POS device*
    
 
 ## Setup a Customer
 
-1. Create an Oxipay customer account in the [Customer Portal](https://portalssandbox.oxipay.com.au/customerarea#/login)
+1. Create an Oxipay customer account in the [Customer Portal](https://portalssandbox.%domain%/customerarea#/login)
 2. Click "Shop Instore" to generate a barcode
 
 

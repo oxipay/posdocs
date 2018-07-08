@@ -12,6 +12,9 @@ artifacts:
   - path: posdocsAU
     name: posdocsAU
     type: zip
+  - path: posdocsNZ
+    name: posdocsNZ
+    type: zip
 
 deploy:
   - provider: S3
@@ -23,6 +26,15 @@ deploy:
     unzip: true
     set_public: true
     artifact: posdocsAU
+  - provider: S3
+    access_key_id: AKIAJIUIKUBZBXHSAR5Q
+    secret_access_key:
+      secure: 3pvBXjsWdGcaxmh5339WyN34ukiKJHyq+lfwxkyd+tfxu/0XgrQDsMfD5Uf44j+h
+    bucket: posdocs.oxipay.co.nz
+    region: ap-southeast-2
+    unzip: true
+    set_public: true
+    artifact: posdocsNZ
 
 notifications:
   - provider: Email
