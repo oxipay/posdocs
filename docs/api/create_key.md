@@ -28,7 +28,7 @@ signature | Hex string case-insensitive | Payload that is signed using HMAC-SHA2
 
 <h3>Testing</h3>
 
-The following describes dummy API requests that return a predictable response. Please contact <a href="mailto:support@oxipay.com.au">support@oxipay.com.au</a> to get access to the test/dummy APIs.
+The following describes dummy API requests that return a predictable response. Please contact <a href="mailto:%email%">%email%</a> to get access to the test/dummy APIs.
 
 Request -> x_device_token | Response -> x_status | Response -> x_code
 -----------|-----------|-----------
@@ -43,4 +43,5 @@ any other value | Error | EISE01
 
 **Testing Assumptions**
 
-* To generate the signature, use a device-signing-key of "1234567890". A invalid signature will cause an ESIG01 Error.
+* To generate the signature, use the supplied device token as the device signing key. A invalid signature will cause an ESIG01 Error.
+

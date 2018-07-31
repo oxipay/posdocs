@@ -1,4 +1,5 @@
 site_name: Oxipay POS Integration
+site_dir: posdocsAU
 pages:
 - Home: 'index.md'
 - Ubiquitous Language: 'ubiquitous_language.md'
@@ -30,3 +31,6 @@ pages:
 theme: readthedocs
 theme_dir: 'theme'
 extra_css: [css/jquery.modal.min.css, css/custom.css]
+extra:
+    domain: oxipay.com.au
+    email: support@oxipay.com.au
