@@ -43,4 +43,5 @@ any other value | Error | EISE01
 
 **Testing Assumptions**
 
-* To generate the signature, use a device-signing-key of "1234567890". A invalid signature will cause an ESIG01 Error.
+* To generate the signature, use the supplied device token as the device signing key. A invalid signature will cause an ESIG01 Error.
+
