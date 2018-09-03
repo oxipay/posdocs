@@ -1,6 +1,6 @@
 site_name: Oxipay POS Integration
 site_dir: posdocsNZ
-pages:
+nav:
 - Home: 'index.md'
 - Ubiquitous Language: 'ubiquitous_language.md'
 - Getting Started: 'getting-started.md'
@@ -28,8 +28,9 @@ pages:
     - Device Initialisation: 'security/device_initialisation.md'
     - Signature Generation: 'security/signature_generation.md'
     - Transport Layer Security: 'security/transport_layer_security.md'
-theme: readthedocs
-theme_dir: 'theme'
+theme:
+    name: readthedocs
+    custom_dir: 'theme'
 extra_css: [css/jquery.modal.min.css, css/custom.css]
 extra:
     domain: oxipay.co.nz
