@@ -12,7 +12,11 @@ The SendReceipt API simply associates a POS transaction reference to the authori
 
 <b>Process Sales Adjustment</b>
 
-Similar to the ProcessAuthorisation API, there are certain scenarios, such as timeouts and network failures, where we might need to 'retry' a single sales adjustment attempt. However, unlike the ProcessAuthorisation API, it is actually valid to call this API multiple times e.g. multiple partial refunds for individual line-items. For this reason, every sales adjustment must specify a unique transaction reference for the adjustment, x_pos_transaction_ref, in addition to the original purchase reference, x_purchase_ref. The x_purchase_ref field allows Oxipay to determine if this is a retry on a single sales adjustment attempt, or if it's a new sales adjustment attempt.
+Similar to the ProcessAuthorisation API, there are certain scenarios, such as timeouts and network failures, where we might need to 'retry' a single sales adjustment attempt. However, unlike the ProcessAuthorisation API, it is actually valid to call this API multiple times e.g. multiple partial refunds for individual line-items.
+
+For this reason, every sales adjustment which is not a reattempt must specify a unique transaction reference for the adjustment, x_pos_transaction_ref, in addition to the original purchase reference, x_purchase_ref. The x_pos_transaction_ref field allows Oxipay to determine if this is a retry on a single sales adjustment attempt, or if it's a new sales adjustment attempt.
+
+In the event that a response is not received from Oxipay, the same refund request may be sent again, ensuring that the x_pos_transaction_ref field is the same as the original request.
 
 **Note**: as per the Process Sales Adjustment API reference, x_purchase_ref is defined as follows:
 <div class="panel">
